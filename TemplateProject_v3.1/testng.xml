@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Default suite" parallel="tests" thread-count="1">
+	<test name="WEB">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="scenarios.WEB.WEBFunctionality_All" />
+		</classes>
+	</test>
+	<test name="SALES">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="scenarios.SALES.SalesLeadership_All" />
+		</classes>
+	</test>
+	<test name="FINANCIALS">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="scenarios.Q2A.Q2A_All" />
+		</classes>
+	</test>
+	<test name="VCM">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="scenarios.VCM.VCM_All" />
+		</classes>
+	</test>
+	<test name="CIA">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="scenarios.CIA.CIA_All" />
+		</classes>
+	</test>
+	<test name="DeleteRow">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="Delete_Excel_Row" />
+		</classes>
+	</test>
+</suite> <!-- Suite -->
+
+
+

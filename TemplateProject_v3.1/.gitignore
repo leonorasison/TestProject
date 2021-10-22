@@ -1,0 +1,5 @@
+/target/
+/test-output/
+/bin/
+/src/main/resources/
+/src/test/resources/
