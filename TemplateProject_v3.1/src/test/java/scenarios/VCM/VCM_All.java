@@ -1204,12 +1204,16 @@ public class VCM_All extends TestBase {
 		// Lsison, 20211019, Add save report function and save exit modal
 		VIPOverviewPage.contents.SaveCompanyButton.click();
 		Thread.sleep(15000);
+		VIPOverviewPage.contents.SaveReportInVIPCloseButton.click();
+		Thread.sleep(1000);
+		VIPOverviewPage.contents.SaveCompanyButton.click();
+		Thread.sleep(15000);
 		VIPOverviewPage.contents.SaveReportInVIPButton.click();
-		VIPOverviewPage.contents.SaveReportInVIPPrompt.waitForExist(true, 60);
-		VIPOverviewPage.contents.SaveReportInVIPPrompt.verifyText("The Report generation may take 5-10 minutes to complete. Once it is completed, you will get another notification and the report will be available in ‘My Reports’ section.");
+		VIPOverviewPage.contents.SaveReportInVIPToaster.waitForExist(true, 60);
+		VIPOverviewPage.contents.SaveReportInVIPToaster.verifyText("The Report generation may take 5-10 minutes to complete. Once it is completed, you will get another notification and the report will be available in ‘My Reports’ section.");
 		Thread.sleep(100000);
-		VIPOverviewPage.contents.SaveReportInVIPPrompt.waitForExist(true, 600);
-		VIPOverviewPage.contents.SaveReportInVIPPrompt.verifyText("Your report has been generated successfully");
+		VIPOverviewPage.contents.SaveReportInVIPToaster.waitForExist(true, 600);
+		VIPOverviewPage.contents.SaveReportInVIPToaster.verifyText("Your report has been generated successfully");
 		Thread.sleep(4000);
 		VIPOverviewPage.contents.BackToSearchButton.hover();
 		VIPOverviewPage.contents.BackToSearchButton.click();
@@ -1293,7 +1297,9 @@ public class VCM_All extends TestBase {
 		WebControl.takeScreenshot("VCM_Reg_Auto_055");
 
 		ReportLog.setTestCase("VCM_Reg_Auto_056");
-		VIPVCMPage.contents.BackButton.verifyDisplayed(true, 5);
+		//Lsison, 20211025, Add checking for EV Impact Chart and Tab label
+		VIPVCMPage.contents.SelectedTab.verifyText("EV Impact");
+		VIPVCMPage.contents.EVImpactChart.verifyDisplayed(true, 5);
 		WebControl.takeScreenshot("VCM_Reg_Auto_056");
 
 		ReportLog.setTestCase("VCM_Reg_Auto_057");
@@ -1317,15 +1323,33 @@ public class VCM_All extends TestBase {
 
 		ReportLog.setTestCase("VCM_Reg_Auto_059");
 		VIPVCMPage.contents.SelectionTab2.click();
+		
+		//Lsison, 20211025, Add checking for chart x and y axis label, Add checking for selected Tab and its label
+		VIPVCMPage.contents.SelectedTab.verifyText("Prioritization Matrix");
+		VIPVCMPage.contents.PrioritizationChartX.verifyDisplayed(true, 5);
+		VIPVCMPage.contents.PrioritizationChartY.verifyDisplayed(true, 5);
+		
 		VIPVCMPage.contents.CRLegendCircle.verifyDisplayed(true, 5);
 		VIPVCMPage.contents.CRLegendText.verifyText("Cost Reduction");
 		VIPVCMPage.contents.RGLegendCircle.verifyDisplayed(true, 5);
 		VIPVCMPage.contents.RGLegendText.verifyText("Revenue Growth");
 		VIPVCMPage.contents.AELegendCircle.verifyDisplayed(true, 5);
 		VIPVCMPage.contents.AELegendText.verifyText("Asset Efficiency");
+		
+
+		
 		WebControl.takeScreenshot("VCM_Reg_Auto_059");
 
 		ReportLog.setTestCase("VCM_Reg_Auto_060");
+		//Lsison, 20211025, Add test for P&L Tab
+		VIPVCMPage.contents.SelectionTab3.click();
+		VIPVCMPage.contents.SelectedTab.verifyDisplayed(true, 5);
+		VIPVCMPage.contents.SelectedTab.verifyText("P&L Impact");
+		VIPVCMPage.contents.PnLTotalRevenueLabel.verifyDisplayed(true, 5);
+		VIPVCMPage.contents.PnLTotalRevenueLabel.verifyText("TOTAL REVENUE IMPACT (USD BN)");
+		VIPVCMPage.contents.PnLTotalEBITLabel.verifyDisplayed(true, 5);
+		VIPVCMPage.contents.PnLTotalEBITLabel.verifyText("TOTAL EBIT MARGIN IMPACT");
+		
 		/*
 		 * Lsison, 20211019, SAVE button was removed in UI
 		 * VIPVCMPage.contents.SaveButtonEnabled.verifyDisplayed(true, 20);
@@ -1336,11 +1360,23 @@ public class VCM_All extends TestBase {
 		 * VIPVCMPage.contents.VCMSaveModalMessage.
 		 * verifyText("Your Value Case Model is now successfully saved. You can view the same in the “My Last Reports” section on the main page."
 		 * ); VIPVCMPage.contents.VCMSaveModalSaveButton.verifyDisplayed(true, 5);
-		 * VIPVCMPage.contents.VCMSaveModalCloseButton.verifyDisplayed(true, 5);
-		 * WebControl.takeScreenshot("VCM_Reg_Auto_060");
-		 * 
-		 * ReportLog.setTestCase("VCM_Reg_Auto_061");
-		 * VIPVCMPage.contents.VCMSaveModalSaveButton.waitForExist(true, 20);
+		 */ VIPVCMPage.contents.VCMSaveModalCloseButton.verifyDisplayed(true, 5);
+		 WebControl.takeScreenshot("VCM_Reg_Auto_060");
+		 
+		 ReportLog.setTestCase("VCM_Reg_Auto_061");
+		VIPVCMPage.contents.SelectionTab4.click();
+		VIPVCMPage.contents.SelectedTab.verifyDisplayed(true, 5);
+		VIPVCMPage.contents.SelectedTab.verifyText("FCF Impact");
+		VIPVCMPage.contents.FCFPreVCOTabLabel.verifyText("Pre-VCO");
+		VIPVCMPage.contents.FCFPostVCOTabLabel.verifyText("Post-VCO");
+		VIPVCMPage.contents.FCFPreVCOHeader.verifyDisplayed(true, 5);
+		VIPVCMPage.contents.FCFPreVCOHeader.FCFPreVCOChart1Label(true, 5);
+		VIPVCMPage.contents.FCFPreVCOHeader.FCFPreVCOChart2Label(true, 5);
+		VIPVCMPage.contents.FCFPreVCOHeader.FCFPreVCOChart1(true, 5);
+		VIPVCMPage.contents.FCFPreVCOHeader.FCFPreVCOChart2(true, 5);
+		 
+		 
+		/* VIPVCMPage.contents.VCMSaveModalSaveButton.waitForExist(true, 20);
 		 * Thread.sleep(2500); VIPVCMPage.contents.VCMSaveModalSaveButton.click();
 		 * Thread.sleep(1000); VIPVCMPage.contents.VCMSaveModal.verifyDisplayed(false);
 		 * VIPVCMPage.contents.VCMBodyTitle.verifyText("VCO Summary");

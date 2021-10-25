@@ -150,7 +150,8 @@ public class VCM_03_Step_3 extends TestBase{
 		WebControl.takeScreenshot("VCM_Reg_Auto_055");
 		
 		ReportLog.setTestCase("VCM_Reg_Auto_056");
-		VIPVCMPage.contents.BackButton.verifyDisplayed(true, 5);
+		//Lsison, 20211025, Add checking for EV Impact Chart
+		VIPVCMPage.contents.EVImpactChart.verifyDisplayed(true, 5);
 		WebControl.takeScreenshot("VCM_Reg_Auto_056");
 		
 		ReportLog.setTestCase("VCM_Reg_Auto_057");
@@ -170,6 +171,11 @@ public class VCM_03_Step_3 extends TestBase{
 		
 		ReportLog.setTestCase("VCM_Reg_Auto_059");
 		VIPVCMPage.contents.SelectionTab2.click();
+		
+		//Lsison, 20211025, Add checking for chart x and y axis label
+		VIPVCMPage.contents.PrioritizationChartX.verifyDisplayed(true, 5);
+		VIPVCMPage.contents.PrioritizationChartY.verifyDisplayed(true, 5);
+		
 		VIPVCMPage.contents.CRLegendCircle.verifyDisplayed(true, 5);
 		VIPVCMPage.contents.CRLegendText.verifyText("Cost Reduction");
 		VIPVCMPage.contents.RGLegendCircle.verifyDisplayed(true, 5);

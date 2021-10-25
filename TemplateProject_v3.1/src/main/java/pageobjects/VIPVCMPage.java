@@ -318,6 +318,7 @@ public class VIPVCMPage extends PageBase{
 		public final Element SelectionTab1;
 		public final Element SelectionTab2;
 		public final Element SelectionTab3;
+		public final Element SelectedTab;
 		public final Element SelectionTab4;
 		public final Element CompanyCurrency;
 		public final Element CRLegendCircle;
@@ -326,6 +327,22 @@ public class VIPVCMPage extends PageBase{
 		public final Element RGLegendText;
 		public final Element AELegendCircle;
 		public final Element AELegendText;
+		
+		//Lsison, 20211025, Test for EV Impact, Prioritization, P&L and FCF Tabs
+		public final Element EVImpactChart;
+		public final Element PrioritizationChartX;
+		public final Element PrioritizationChartY;
+		public final Element PnLTotalRevenueLabel;
+		public final Element PnLTotalRevenueChart;
+		public final Element PnLTotalEBITLabel;
+		public final Element PnLTotalEBITChart;
+		public final Element FCFPreVCOTabLabel;
+		public final Element FCFPostVCOTabLabel;
+		public final Element FCFPreVCOHeader;
+		public final Element FCFPreVCOChart1Label;
+		public final Element FCFPreVCOChart2Label;
+		public final Element FCFPreVCOChart1;
+		public final Element FCFPreVCOChart2;
 		
 		/* Lsison, 20211019, SAVE button was removed in UI
 		 * public final Element VCMSaveModal; public final Element VCMSaveModalHeader;
@@ -654,6 +671,7 @@ public class VIPVCMPage extends PageBase{
 			SelectionTab1 = new Element("EV Impact Tab", By.xpath("(//*[@class='summary-tabs-item'])[1]"), this);
 			SelectionTab2 = new Element("Prioritization Matrix Tab", By.xpath("(//*[@class='summary-tabs-item'])[2]"), this);
 			SelectionTab3 = new Element("P&L Impact Tab", By.xpath("(//*[@class='summary-tabs-item'])[3]"), this);
+			SelectedTab = new Element("Step 3 Selected Tab", By.xpath("//*[@class='ng-star-inserted summary-tabs-selected']"), this);
 			SelectionTab4 = new Element("FCF Impact Tab", By.xpath("(//*[@class='summary-tabs-item'])[4]"), this);
 			CompanyCurrency = new Element("Company Currency", By.xpath("//*[@class='evIsoCode']"), this);
 			CRLegendCircle = new Element("Cost Reduction Legend Circle", By.xpath("//*[@class='pnl-scatterchart-legend-item'][1]/div[1]"), this);
@@ -679,6 +697,24 @@ public class VIPVCMPage extends PageBase{
 			VCMHelpIcon = new Element("VCM Help Icon", By.xpath("//*[@class='vcm-helpimage']"), this);
 			VCMFootNote = new Element("VCM FootNote", By.xpath("//*[@class='selectvco-footnote ng-star-inserted']"), this);
 			
+			//Lsison, 20211025, Test for EV Impact, Prioritization, P&L and FCF Tabs
+			EVImpactChart = new Element("EV Impact Charts", By.xpath("//*[@class='chartjs-render-monitor']"), this);
+			EVImpactChart = new Element("EV Impact Charts", By.xpath("//*[@class='chartjs-render-monitor']"), this);
+			PrioritizationChartX = new Element("Prioritization Matrix X-axis Chart Label", By.xpath("//*[@class='pnl-scatterchart-label-xAxis-two ng-star-inserted']"), this);
+			PrioritizationChartY = new Element("Prioritization Matrix Y-axis Chart Label", By.xpath("//*[@class='pnl-scatterchart-label-yAxis ng-star-inserted']"), this);
+			PnLTotalRevenueLabel = new Element("P&L Total Revenue Label", By.xpath("(//*[@class='pnl-chart-title'])[1]"), this);
+			PnLTotalRevenueChart = new Element("P&L Total Revenue Chart", By.xpath("(//*[@class='chartjs-render-monitor'])[1]"), this);
+			PnLTotalEBITLabel = new Element("P&L Total EBIT Label", By.xpath("(//*[@class='pnl-chart-title'])[2]"), this);
+			PnLTotalEBITChart = new Element("P&L Total Revenue Chart", By.xpath("(//*[@class='chartjs-render-monitor'])[2]"), this);
+			FCFPreVCOTabLabel = new Element("FCF Pre-VCO Tab Label", By.xpath("//*[@class='ng-star-inserted'] //*[normalize-space(text())='Pre-VCO']"), this);
+			FCFPostVCOTabLabel = new Element("FCF Post-VCO Tab Label", By.xpath("//*[@class='ng-star-inserted'] //*[normalize-space(text())='Post-VCO']"), this);
+			FCFPreVCOHeader = new Element("FCF Pre-VCO Header Text", By.xpath("//*[@class='//*[@class='fcf-subheader-lineOne']"), this);
+			FCFPreVCOChart1Label = new Element("FCF Pre-VCO Chart1 Label", By.xpath("//*[@class='fcf-subheader-lineTwo-lhs']"), this);
+			FCFPreVCOChart2Label = new Element("FCF Pre-VCO Chart1 Label", By.xpath("//*[@class='fcf-subheader-lineTwo-rhs']"), this);
+			FCFPreVCOChart1 = new Element("FCF Pre-VCO Chart1 Label", By.xpath("//*[@class='chartjs-render-monitor']"), this);
+			FCFPreVCOChart2 = new Element("FCF Pre-VCO Chart1 Label", By.xpath("//*[@class='fcf-chart-rhs ng-star-inserted']"), this);
+		
+		
 		}
 	}
 	

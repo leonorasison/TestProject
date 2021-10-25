@@ -36,8 +36,10 @@ public class VIPOverviewPage extends PageBase{
 		
 		// Lsison, 20211018, add save company button
 		public final Element SaveCompanyButton;
+		public final Element SaveReportInVIPCloseButton;
 		public final Element SaveReportInVIPButton;
-		public final Element SaveReportInVIPPrompt;
+		public final Element SaveReportInVIPToaster;
+		public final Element SaveReportInVIPCloseToasterButton;
 		
 		public final Element CompanyName;
 		//public final Element OverviewCompanyName;
@@ -152,8 +154,10 @@ public class VIPOverviewPage extends PageBase{
 			ExitSavePopupText = new Element ("Exit Save Popup Text", By.xpath("(//*[@class=\"modal-body-esg-text\"])[2]"), this);
 			ExitSavePopupYesButton = new Element ("Exit Save Popup Yes Button", By.xpath("//*[@id=\"exitsavePopup\"]/div/div/div[2]/div[1]/button[1]"), this);
 			SaveCompanyButton = new Element ("SaveCompanyButton", By.xpath("//*[@data-target = '#popup-save-report']"), this);
+			SaveReportInVIPCloseButton = new Element("Save Report In VIP Button", By.xpath("(//*[@class='close-button'])[1]"), this);
 			SaveReportInVIPButton = new Element("Save Report In VIP Button", By.xpath(" //*[@class='save-report ng-star-inserted']"), this);
-			SaveReportInVIPPrompt = new Element("Save Report In VIP Button", By.xpath("//*[@id=\"toast-container\"]/div/div"), this);
+			SaveReportInVIPToaster = new Element("Save Report In VIP Toaster Message", By.xpath("//*[@id=\"toast-container\"]/div/div"), this);
+			SaveReportInVIPCloseToasterButton = new Element("Save Report In VIP Close Toaster Message", By.xpath("//*[@class='toast-close-button ng-tns-c69-4 ng-star-inserted']"), this);
 			CompanyName = new Element("Company Name", By.xpath("//*[@class='header-text']/div[2]/div[1]"), this);
 			//OverviewCompanyName = new Element("Company Name Label", By.xpath("//*[@class='header-text']/div[2]//*[@class='ng-tns-c27-2 ng-star-inserted']"), this);
 			//RefreshCompanyName = new Element("Company Name Label", By.xpath("//*[@class='header-text']/div[2]//*[@class='ng-tns-c27-3 ng-star-inserted']"), this);
