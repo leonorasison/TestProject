@@ -1360,7 +1360,8 @@ public class VCM_All extends TestBase {
 		 * VIPVCMPage.contents.VCMSaveModalMessage.
 		 * verifyText("Your Value Case Model is now successfully saved. You can view the same in the “My Last Reports” section on the main page."
 		 * ); VIPVCMPage.contents.VCMSaveModalSaveButton.verifyDisplayed(true, 5);
-		 */ VIPVCMPage.contents.VCMSaveModalCloseButton.verifyDisplayed(true, 5);
+		 * VIPVCMPage.contents.VCMSaveModalCloseButton.verifyDisplayed(true, 5);
+		 */
 		 WebControl.takeScreenshot("VCM_Reg_Auto_060");
 		 
 		 ReportLog.setTestCase("VCM_Reg_Auto_061");
@@ -1370,10 +1371,10 @@ public class VCM_All extends TestBase {
 		VIPVCMPage.contents.FCFPreVCOTabLabel.verifyText("Pre-VCO");
 		VIPVCMPage.contents.FCFPostVCOTabLabel.verifyText("Post-VCO");
 		VIPVCMPage.contents.FCFPreVCOHeader.verifyDisplayed(true, 5);
-		VIPVCMPage.contents.FCFPreVCOHeader.FCFPreVCOChart1Label(true, 5);
-		VIPVCMPage.contents.FCFPreVCOHeader.FCFPreVCOChart2Label(true, 5);
-		VIPVCMPage.contents.FCFPreVCOHeader.FCFPreVCOChart1(true, 5);
-		VIPVCMPage.contents.FCFPreVCOHeader.FCFPreVCOChart2(true, 5);
+		VIPVCMPage.contents.FCFPreVCOChart1Label.verifyDisplayed(true, 5);
+		VIPVCMPage.contents.FCFPreVCOChart2Label.verifyDisplayed(true, 5);
+		VIPVCMPage.contents.FCFPreVCOChart1.verifyDisplayed(true, 5);
+		VIPVCMPage.contents.FCFPreVCOChart2.verifyDisplayed(true, 5);
 		 
 		 
 		/* VIPVCMPage.contents.VCMSaveModalSaveButton.waitForExist(true, 20);
