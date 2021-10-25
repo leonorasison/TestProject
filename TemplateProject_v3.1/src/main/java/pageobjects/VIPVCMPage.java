@@ -375,7 +375,7 @@ public class VIPVCMPage extends PageBase{
 			NextButtonDoneNote = new Element("Next Button Done Note", By.xpath("//*[@class='vcm-body-top-proceed-note ng-star-inserted vcm-body-top-proceed-note-allow']"), this);
 			BackButton = new Element("Back Button", By.xpath("//*[@class='vcm-body-top-back ng-star-inserted']"), this);
 			SelectedProgressBar = new Element("Selected Progress Bar", By.xpath("//*[@class='rect vcm-progressbar2-step ng-star-inserted']"), this);
-			UnselectedProgressBar1 = new Element("Unselected Progress Bar 1", By.xpath("//*[@class='rect vcm-progressbar2-step ng-star-inserted lightviolet-1']"), this);
+			UnselectedProgressBar1 = new Element("Unselected Progress Bar Purple", By.xpath("//*[@class='rect vcm-progressbar2-step ng-star-inserted lightviolet-1']"), this);
 			UnselectedProgressBar2 = new Element("Unselected Progress Bar 2", By.xpath("//*[@class='rect vcm-progressbar2-step ng-star-inserted lightviolet']"), this);
 			ProgressBarStep1 = new Element("Progress Bar Step 1", By.xpath("//*[@class='vcm-progressbar2-text-step'][1]"), this);
 			ProgressBarStep2 = new Element("Progress Bar Step 2", By.xpath("//*[@class='vcm-progressbar2-text-step'][2]"), this);
