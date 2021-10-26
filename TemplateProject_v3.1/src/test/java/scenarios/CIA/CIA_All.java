@@ -7,11 +7,11 @@ import auto.framework.TestBase;
 import auto.framework.web.WebControl;
 import common.TestDataHandler;
 import common_scenarios.VIP_Common;
+import pageobjects.VIPCIAPage;
+import pageobjects.VIPCompetitorPage;
 import pageobjects.VIPLandingPage;
 import pageobjects.VIPOverviewPage;
 import pageobjects.VIPSalesPage;
-import pageobjects.VIPCIAPage;
-import pageobjects.VIPCompetitorPage;
 
 public class CIA_All extends TestBase{
 	

@@ -1,24 +1,18 @@
 package scenarios.WEB;
 
+import java.util.Calendar;
+
 import org.testng.annotations.Test;
+
 import auto.framework.ReportLog;
 import auto.framework.TestBase;
 import auto.framework.web.WebControl;
 import common.TestDataHandler;
 import common_scenarios.VIP_Common;
 import pageobjects.VIPCompetitorPage;
-import pageobjects.VIPExecutivesPage;
 import pageobjects.VIPFinancialsPage;
 import pageobjects.VIPLandingPage;
-import pageobjects.VIPLogInPage;
-import pageobjects.VIPNewsPage;
 import pageobjects.VIPOverviewPage;
-import pageobjects.VIPTranscriptPage;
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.Calendar;
 
 public class WEBFunctionality_Financials_Old extends TestBase{
 	

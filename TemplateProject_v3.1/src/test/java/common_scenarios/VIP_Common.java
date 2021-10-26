@@ -1,6 +1,5 @@
 package common_scenarios;
 
-import static org.testng.Assert.fail;
 import java.awt.Desktop;
 import java.awt.Robot;
 import java.awt.Toolkit;
@@ -9,12 +8,10 @@ import java.awt.event.KeyEvent;
 import java.io.File;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
 import java.util.Calendar;
-import org.openqa.selenium.WebElement;
+
 import auto.framework.ReportLog;
 import auto.framework.web.WebControl;
-import auto.framework.web.WebControl1;
 import common.TestDataHandler;
 import pageobjects.VIPCustomPage;
 import pageobjects.VIPLandingPage;

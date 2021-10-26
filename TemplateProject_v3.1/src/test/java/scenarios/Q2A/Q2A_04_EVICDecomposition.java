@@ -10,8 +10,6 @@ import common_scenarios.VIP_Common;
 import pageobjects.VIPFinancialsPage;
 import pageobjects.VIPLandingPage;
 import pageobjects.VIPOverviewPage;
-import pageobjects.VIPSalesPage;
-import pageobjects.VIPFinancialsPage;
 
 
 public class Q2A_04_EVICDecomposition extends TestBase{

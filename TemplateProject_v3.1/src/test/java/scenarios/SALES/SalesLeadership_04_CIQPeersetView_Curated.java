@@ -1,28 +1,20 @@
 package scenarios.SALES;
 
+import java.text.NumberFormat;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 import org.testng.annotations.Test;
+
 import auto.framework.ReportLog;
 import auto.framework.TestBase;
 import auto.framework.web.WebControl;
 import common.TestDataHandler;
 import common_scenarios.VIP_Common;
 import pageobjects.VIPCompetitorPage;
-import pageobjects.VIPExecutivesPage;
-import pageobjects.VIPFinancialsPage;
 import pageobjects.VIPLandingPage;
-import pageobjects.VIPLogInPage;
-import pageobjects.VIPNewsPage;
 import pageobjects.VIPOverviewPage;
-import pageobjects.VIPSalesPage;
-import pageobjects.VIPTranscriptPage;
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-import java.text.NumberFormat;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 
 public class SalesLeadership_04_CIQPeersetView_Curated extends TestBase{
 	

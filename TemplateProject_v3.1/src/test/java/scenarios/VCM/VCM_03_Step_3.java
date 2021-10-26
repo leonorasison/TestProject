@@ -1,35 +1,17 @@
 package scenarios.VCM;
 
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
+
 import auto.framework.ReportLog;
 import auto.framework.TestBase;
 import auto.framework.web.WebControl;
-import auto.framework.web.WebControl1;
 import common.TestDataHandler;
 import common_scenarios.VIP_Common;
-import pageobjects.VIPCIAPage;
-import pageobjects.VIPCompetitorPage;
-import pageobjects.VIPExecutivesPage;
 import pageobjects.VIPFinancialsPage;
 import pageobjects.VIPLandingPage;
-import pageobjects.VIPLogInPage;
-import pageobjects.VIPNewsPage;
 import pageobjects.VIPOverviewPage;
 import pageobjects.VIPSalesPage;
-import pageobjects.VIPTranscriptPage;
 import pageobjects.VIPVCMPage;
-
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.YearMonth;
-import java.time.format.DateTimeFormatter;
-import java.util.Calendar;
 
 public class VCM_03_Step_3 extends TestBase{
 	
@@ -151,7 +133,7 @@ public class VCM_03_Step_3 extends TestBase{
 		
 		ReportLog.setTestCase("VCM_Reg_Auto_056");
 		//Lsison, 20211025, Add checking for EV Impact Chart
-		VIPVCMPage.contents.EVImpactChart.verifyDisplayed(true, 5);
+		VIPVCMPage.contents.Step3Chart.verifyDisplayed(true, 5);
 		WebControl.takeScreenshot("VCM_Reg_Auto_056");
 		
 		ReportLog.setTestCase("VCM_Reg_Auto_057");

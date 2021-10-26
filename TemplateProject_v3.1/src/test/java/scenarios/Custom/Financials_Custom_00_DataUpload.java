@@ -12,14 +12,7 @@ import auto.framework.TestBase;
 import auto.framework.web.WebControl;
 import common.TestDataHandler;
 import common_scenarios.VIP_Common;
-import pageobjects.VIPCompetitorPage;
 import pageobjects.VIPCustomPage;
-import pageobjects.VIPFinancialsPage;
-import pageobjects.VIPLandingPage;
-import pageobjects.VIPLogInPage;
-import pageobjects.VIPOverviewPage;
-import pageobjects.VIPSalesPage;
-import pageobjects.VIPFinancialsPage;
 
 public class Financials_Custom_00_DataUpload extends TestBase {
 

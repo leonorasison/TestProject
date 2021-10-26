@@ -1,28 +1,20 @@
 package scenarios.SALES;
 
-import org.testng.annotations.Test;
-import auto.framework.ReportLog;
-import auto.framework.TestBase;
-import auto.framework.web.WebControl;
-import auto.framework.web.WebControl1;
-import common.TestDataHandler;
-import common_scenarios.VIP_Common;
-import pageobjects.VIPCompetitorPage;
-import pageobjects.VIPExecutivesPage;
-import pageobjects.VIPLandingPage;
-import pageobjects.VIPLogInPage;
-import pageobjects.VIPNewsPage;
-import pageobjects.VIPOverviewPage;
-import pageobjects.VIPSalesPage;
-import pageobjects.VIPTranscriptPage;
-import pageobjects.VIPFinancialsPage;
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
+import org.testng.annotations.Test;
+
+import auto.framework.ReportLog;
+import auto.framework.TestBase;
+import auto.framework.web.WebControl;
+import common.TestDataHandler;
+import common_scenarios.VIP_Common;
+import pageobjects.VIPFinancialsPage;
+import pageobjects.VIPLandingPage;
+import pageobjects.VIPOverviewPage;
+import pageobjects.VIPSalesPage;
 
 public class SalesLeadership_07_IndustryXOKPIs extends TestBase{
 	

@@ -1,8 +1,7 @@
 package pageobjects;
 
-import java.io.File;
-
 import org.openqa.selenium.By;
+
 import auto.framework.PageBase;
 import auto.framework.web.Element;
 import auto.framework.web.TextBox;

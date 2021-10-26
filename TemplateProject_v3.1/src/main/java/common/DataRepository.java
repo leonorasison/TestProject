@@ -1,9 +1,9 @@
 package common;
 
 import auto.framework.DataTable;
+import auto.framework.DataTable.DataTableInstance;
 import auto.framework.Resources;
 import auto.framework.TestManager;
-import auto.framework.DataTable.DataTableInstance;
 
 public class DataRepository {
 

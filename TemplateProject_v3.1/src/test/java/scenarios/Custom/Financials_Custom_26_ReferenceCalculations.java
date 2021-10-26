@@ -1,16 +1,5 @@
 package scenarios.Custom;
 
-import java.awt.Robot;
-import java.awt.Toolkit;
-import java.awt.datatransfer.StringSelection;
-import java.awt.event.KeyEvent;
-import java.text.DateFormat;
-import java.text.DecimalFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-
 import org.testng.annotations.Test;
 
 import auto.framework.ReportLog;
@@ -18,16 +7,9 @@ import auto.framework.TestBase;
 import auto.framework.web.WebControl;
 import common.TestDataHandler;
 import common_scenarios.VIP_Common;
-import pageobjects.VIPCompetitorPage;
 import pageobjects.VIPCustomPage;
-import pageobjects.VIPFinancialsPage;
 import pageobjects.VIPLandingPage;
-import pageobjects.VIPLogInPage;
 import pageobjects.VIPOverviewPage;
-import pageobjects.VIPSalesPage;
-import pageobjects.VIPFinancialsPage;
-import java.util.Calendar;
-import java.util.Date;
 
 public class Financials_Custom_26_ReferenceCalculations extends TestBase{
 

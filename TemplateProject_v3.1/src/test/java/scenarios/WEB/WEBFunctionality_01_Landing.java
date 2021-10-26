@@ -1,31 +1,18 @@
 package scenarios.WEB;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import org.testng.annotations.Test;
+
 import auto.framework.ReportLog;
 import auto.framework.TestBase;
 import auto.framework.web.WebControl;
 import common.TestDataHandler;
 import common_scenarios.VIP_Common;
-import pageobjects.VIPCompetitorPage;
-import pageobjects.VIPExecutivesPage;
-import pageobjects.VIPFinancialsPage;
 import pageobjects.VIPLandingPage;
-import pageobjects.VIPLogInPage;
-import pageobjects.VIPNewsPage;
 import pageobjects.VIPOverviewPage;
-import pageobjects.VIPSalesPage;
-import pageobjects.VIPTranscriptPage;
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-import java.text.DateFormat;
-import java.text.NumberFormat;
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Date;
-import java.util.List;
 
 public class WEBFunctionality_01_Landing extends TestBase{
 	

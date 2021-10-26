@@ -1,12 +1,15 @@
 package scenarios.SALES;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.interactions.Actions;
+import java.math.BigDecimal;
+import java.text.NumberFormat;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 import org.testng.annotations.Test;
+
 import auto.framework.ReportLog;
 import auto.framework.TestBase;
-import auto.framework.WebManager;
 import auto.framework.web.WebControl;
 import auto.framework.web.WebControl1;
 import common.TestDataHandler;
@@ -17,13 +20,6 @@ import pageobjects.VIPLandingPage;
 import pageobjects.VIPOverviewPage;
 import pageobjects.VIPSalesPage;
 import pageobjects.VIPTranscriptPage;
-import java.math.BigDecimal;
-import java.text.NumberFormat;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 
 public class SalesLeadership_All extends TestBase{
 	

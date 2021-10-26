@@ -1,28 +1,21 @@
 package scenarios.VCM;
 
+import java.math.BigDecimal;
+import java.time.YearMonth;
+import java.time.format.DateTimeFormatter;
+
 import org.testng.annotations.Test;
+
 import auto.framework.ReportLog;
 import auto.framework.TestBase;
 import auto.framework.web.WebControl;
 import common.TestDataHandler;
 import common_scenarios.VIP_Common;
-import pageobjects.VIPCIAPage;
-import pageobjects.VIPCompetitorPage;
-import pageobjects.VIPExecutivesPage;
 import pageobjects.VIPFinancialsPage;
 import pageobjects.VIPLandingPage;
-import pageobjects.VIPLogInPage;
-import pageobjects.VIPNewsPage;
 import pageobjects.VIPOverviewPage;
 import pageobjects.VIPSalesPage;
-import pageobjects.VIPTranscriptPage;
 import pageobjects.VIPVCMPage;
-
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-import java.time.LocalDate;
-import java.time.YearMonth;
-import java.time.format.DateTimeFormatter;
 
 public class VCM_02_Step_2 extends TestBase{
 	
@@ -336,7 +329,7 @@ public class VCM_02_Step_2 extends TestBase{
 		VIPVCMPage.contents.ReferenceDataName1_2.verifyText("2-year Revenue CAGR (forecast)");
 		if (CAGR2Yr4 >= 0) {
 //		VIPVCMPage.contents.ReferenceDataValue1_2.verifyText("+" + CAGR2Yr);}  Lsison, 20211020, For confirmation
-		VIPVCMPage.contents.ReferenceDataValue1_2.verifyText("+26.7%");} //Lsison, 20211020, Temp hardcode
+		VIPVCMPage.contents.ReferenceDataValue1_2.verifyText("+26.6%");} //Lsison, 20211020, Temp hardcode
 		else {VIPVCMPage.contents.ReferenceDataValue1_2.verifyText(CAGR2Yr);}
 		WebControl.takeScreenshot("VCM_Reg_Auto_035");
 		

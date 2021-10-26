@@ -1,31 +1,24 @@
 package scenarios.VCM;
 
+import java.math.BigDecimal;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.time.YearMonth;
+import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
+
 import org.testng.annotations.Test;
+
 import auto.framework.ReportLog;
 import auto.framework.TestBase;
 import auto.framework.web.WebControl;
 import common.TestDataHandler;
 import common_scenarios.VIP_Common;
-import pageobjects.VIPCIAPage;
-import pageobjects.VIPCompetitorPage;
-import pageobjects.VIPExecutivesPage;
 import pageobjects.VIPFinancialsPage;
 import pageobjects.VIPLandingPage;
-import pageobjects.VIPLogInPage;
-import pageobjects.VIPNewsPage;
 import pageobjects.VIPOverviewPage;
 import pageobjects.VIPSalesPage;
-import pageobjects.VIPTranscriptPage;
 import pageobjects.VIPVCMPage;
-
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.YearMonth;
-import java.time.format.DateTimeFormatter;
-import java.util.Calendar;
 
 public class VCM_All_Old extends TestBase{
 	

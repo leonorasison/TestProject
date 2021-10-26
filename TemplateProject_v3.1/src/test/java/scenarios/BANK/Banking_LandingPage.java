@@ -1,6 +1,7 @@
 package scenarios.BANK;
 
 import org.testng.annotations.Test;
+
 import auto.framework.ReportLog;
 import auto.framework.TestBase;
 import auto.framework.web.WebControl;

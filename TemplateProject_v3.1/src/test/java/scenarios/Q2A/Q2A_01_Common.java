@@ -11,8 +11,6 @@ import pageobjects.VIPCompetitorPage;
 import pageobjects.VIPFinancialsPage;
 import pageobjects.VIPLandingPage;
 import pageobjects.VIPOverviewPage;
-import pageobjects.VIPSalesPage;
-import pageobjects.VIPFinancialsPage;
 
 
 public class Q2A_01_Common extends TestBase{

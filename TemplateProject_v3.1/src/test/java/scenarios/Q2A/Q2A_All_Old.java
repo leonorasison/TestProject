@@ -1,28 +1,21 @@
 package scenarios.Q2A;
 
+import java.math.BigDecimal;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 import org.testng.annotations.Test;
+
 import auto.framework.ReportLog;
 import auto.framework.TestBase;
 import auto.framework.web.WebControl;
-import auto.framework.web.WebControl.WebFile;
 import common.TestDataHandler;
 import common_scenarios.VIP_Common;
 import pageobjects.VIPCompetitorPage;
-import pageobjects.VIPExecutivesPage;
 import pageobjects.VIPFinancialsPage;
 import pageobjects.VIPLandingPage;
-import pageobjects.VIPLogInPage;
-import pageobjects.VIPNewsPage;
 import pageobjects.VIPOverviewPage;
-import pageobjects.VIPSalesPage;
-import pageobjects.VIPTranscriptPage;
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.Calendar;
-import java.util.Date;
 
 public class Q2A_All_Old extends TestBase{
 	

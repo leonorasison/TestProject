@@ -1,7 +1,9 @@
 package scenarios.SHELDON;
 
 import java.text.NumberFormat;
+
 import org.testng.annotations.Test;
+
 import auto.framework.ReportLog;
 import auto.framework.TestBase;
 import auto.framework.web.WebControl;

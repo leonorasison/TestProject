@@ -1,29 +1,16 @@
 package scenarios.Custom;
 
-import java.awt.Robot;
-import java.awt.Toolkit;
-import java.awt.datatransfer.StringSelection;
-import java.awt.event.KeyEvent;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import org.testng.annotations.Test;
 
 import auto.framework.ReportLog;
 import auto.framework.TestBase;
-import auto.framework.web.Element;
 import auto.framework.web.WebControl;
 import common.TestDataHandler;
 import common_scenarios.VIP_Common;
-import pageobjects.VIPCompetitorPage;
 import pageobjects.VIPCustomPage;
 import pageobjects.VIPFinancialsPage;
 import pageobjects.VIPLandingPage;
-import pageobjects.VIPLogInPage;
 import pageobjects.VIPOverviewPage;
-import pageobjects.VIPSalesPage;
-import pageobjects.VIPFinancialsPage;
 
 
 public class Financials_Custom_02_Common extends TestBase{

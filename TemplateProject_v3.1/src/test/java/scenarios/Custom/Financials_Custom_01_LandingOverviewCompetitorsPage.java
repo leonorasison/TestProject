@@ -1,9 +1,5 @@
   package scenarios.Custom;
 
-import java.awt.Robot;
-import java.awt.Toolkit;
-import java.awt.datatransfer.StringSelection;
-import java.awt.event.KeyEvent;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.text.DateFormat;
@@ -23,10 +19,7 @@ import pageobjects.VIPCompetitorPage;
 import pageobjects.VIPCustomPage;
 import pageobjects.VIPFinancialsPage;
 import pageobjects.VIPLandingPage;
-import pageobjects.VIPLogInPage;
 import pageobjects.VIPOverviewPage;
-import pageobjects.VIPSalesPage;
-import pageobjects.VIPFinancialsPage;
 
 
 public class Financials_Custom_01_LandingOverviewCompetitorsPage extends TestBase{
