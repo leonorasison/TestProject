@@ -1208,7 +1208,6 @@ public class VCM_All extends TestBase {
 		VIPOverviewPage.contents.BackToSearchButton.hover();
 		VIPOverviewPage.contents.BackToSearchButton.click();
 		VIPOverviewPage.contents.ExitSavePopupYesButton.click();
-		Thread.sleep(3000);
 
 		// Old code for fixing as noticed by Lsison
 		VIPLandingPage.contents.ReportsTotal.waitForExist(true, 40);
@@ -1315,10 +1314,16 @@ public class VCM_All extends TestBase {
 		VIPVCMPage.contents.SelectionTab2.click();
 		
 		//Lsison, 20211025, Add checking for chart x and y axis label, Add checking for selected Tab and its label
-		//VIPVCMPage.contents.Step3Chart.hover();
-		//VIPVCMPage.contents.SelectedTab.verifyText("Prioritization Matrix");
-		//VIPVCMPage.contents.PrioritizationChartX.verifyDisplayed(true, 5);
-		//VIPVCMPage.contents.PrioritizationChartY.verifyDisplayed(true, 5);
+		VIPLandingPage.contents.HelpIcon.hover();
+		VIPVCMPage.contents.SelectedTab.verifyText("Prioritization Matrix");
+		//VIPVCMPage.contents.PrioritizationChartX.verifyText("Ease of Implementation");
+		/*
+		 * if (Currency[2].equals("B")) {
+		 * VIPVCMPage.contents.PrioritizationChartY.verifyText("Impact EV" + "("+
+		 * Currency[0] + " bn)"); } else if (Currency[2].equals("M")) {
+		 * VIPVCMPage.contents.PrioritizationChartY.verifyText("Impact EV" + "(" +
+		 * Currency[0] + " mn)"); }
+		 */
 		
 		VIPVCMPage.contents.CRLegendCircle.verifyDisplayed(true, 5);
 		VIPVCMPage.contents.CRLegendText.verifyText("Cost Reduction");
@@ -1327,16 +1332,17 @@ public class VCM_All extends TestBase {
 		VIPVCMPage.contents.AELegendCircle.verifyDisplayed(true, 5);
 		VIPVCMPage.contents.AELegendText.verifyText("Asset Efficiency");
 		
-
-		
 		WebControl.takeScreenshot("VCM_Reg_Auto_059");
+		
 
 		ReportLog.setTestCase("VCM_Reg_Auto_060");
-		//Lsison, 20211025, Add test for P&L Tab
 		VIPVCMPage.contents.SelectionTab3.click();
+		
+		//Lsison, 20211025, Add test for P&L Tab
+		VIPLandingPage.contents.HelpIcon.hover();
 		//VIPVCMPage.contents.Step3Chart.hover();
-		//VIPVCMPage.contents.SelectedTab.verifyDisplayed(true, 5);
-		//VIPVCMPage.contents.SelectedTab.verifyText("P&L Impact");
+		VIPVCMPage.contents.SelectedTab.verifyDisplayed(true, 5);
+		VIPVCMPage.contents.SelectedTab.verifyText("P&L Impact");
 		VIPVCMPage.contents.PnLTotalRevenueLabel.verifyDisplayed(true, 5);
 		VIPVCMPage.contents.PnLTotalRevenueLabel.verifyText("TOTAL REVENUE IMPACT (USD BN)");
 		VIPVCMPage.contents.PnLTotalEBITLabel.verifyDisplayed(true, 5);
@@ -1358,9 +1364,9 @@ public class VCM_All extends TestBase {
 		 
 		 ReportLog.setTestCase("VCM_Reg_Auto_061");
 		VIPVCMPage.contents.SelectionTab4.click();
-		//VIPVCMPage.contents.Step3Chart.hover();
-		//VIPVCMPage.contents.SelectedTab.verifyDisplayed(true, 5);
-		//VIPVCMPage.contents.SelectedTab.verifyText("FCF Impact");
+		VIPLandingPage.contents.HelpIcon.hover();
+		VIPVCMPage.contents.SelectedTab.verifyDisplayed(true, 5);
+		VIPVCMPage.contents.SelectedTab.verifyText("FCF Impact");
 		VIPVCMPage.contents.FCFPreVCOTabLabel.verifyText("Pre-VCO");
 		VIPVCMPage.contents.FCFPostVCOTabLabel.verifyText("Post-VCO");
 		VIPVCMPage.contents.FCFPreVCOHeader.verifyDisplayed(true, 5);
@@ -1370,14 +1376,13 @@ public class VCM_All extends TestBase {
 		//VIPVCMPage.contents.Step3Chart.verifyDisplayed(true, 5);
 		//VIPVCMPage.contents.FCFPreVCOChart2.verifyDisplayed(true, 5);
 		 
-		 
 		/* VIPVCMPage.contents.VCMSaveModalSaveButton.waitForExist(true, 20);
 		 * Thread.sleep(2500); VIPVCMPage.contents.VCMSaveModalSaveButton.click();
 		 * Thread.sleep(1000); VIPVCMPage.contents.VCMSaveModal.verifyDisplayed(false);
-		 * VIPVCMPage.contents.VCMBodyTitle.verifyText("VCO Summary");
-		 * WebControl.takeScreenshot("VCM_Reg_Auto_061");
-		 * 
-		 * ReportLog.setTestCase("VCM_Reg_Auto_062");
+		 */ VIPVCMPage.contents.VCMBodyTitle.verifyText("VCO Summary");
+	 	WebControl.takeScreenshot("VCM_Reg_Auto_061");
+		  
+		/* ReportLog.setTestCase("VCM_Reg_Auto_062");
 		 * VIPVCMPage.contents.SaveButtonEnabled.verifyDisplayed(false);
 		 * VIPVCMPage.contents.SaveButtonDisabled.verifyDisplayed(true, 3);
 		 * WebControl.takeScreenshot("VCM_Reg_Auto_062");
@@ -1560,7 +1565,7 @@ public class VCM_All extends TestBase {
 		
 		//Lsison, 20211026, Test Add Custom VCO without Description
 		ReportLog.setTestCase("VCM_Reg_Auto_072");
-		VIPLandingPage.contents.HelpIcon.hover();
+//		VIPLandingPage.contents.HelpIcon.hover();
 		VIPOverviewPage.contents.BackToSearchButton.hover();
 		VIPOverviewPage.contents.BackToSearchButton.click();
 		VIPOverviewPage.contents.ExitSavePopupYesButton.click();
