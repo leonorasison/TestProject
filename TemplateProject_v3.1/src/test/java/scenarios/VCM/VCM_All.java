@@ -23,7 +23,7 @@ public class VCM_All extends TestBase {
 		ReportLog.setTestName("VCM - Step 1");
 		TestDataHandler testDataHandler = TestDataHandler.loadTestData("Sheet", "RowSelection='Test1'");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_001");
+		ReportLog.setTestCase("VCM_Reg_Auto_001 - Verify VALUE CASE MODELER  in Side Menu");
 		VIP_Common.LogInPage(testDataHandler);
 		Thread.sleep(3000);
 		VIPLandingPage.contents.WhatsNewModal.waitForExist(true, 25);
@@ -59,13 +59,15 @@ public class VCM_All extends TestBase {
 		Thread.sleep(3000);
 		VIPVCMPage.contents.SideMenuVCM.verifyDisplayed(true, 60);
 		Thread.sleep(3000);
-		WebControl.takeScreenshot("VCM_Reg_Auto_001");
+		WebControl.takeScreenshot("VCM_Reg_Auto_001 - Verify VALUE CASE MODELER  in Side Menu");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_002_to_007");
+		ReportLog.setTestCase("VCM_Reg_Auto_002 - Verify display of Select Value Creation Opportunites page ");
 		VIPLandingPage.contents.HelpIcon.hover();
 		Thread.sleep(3000);
 		VIPVCMPage.contents.SideMenuVCM.click();
 		Thread.sleep(5000);
+		WebControl.takeScreenshot("VCM_Reg_Auto_002 - Verify display of Select Value Creation Opportunites page ");
+		
 		if (testDataHandler.ShowVCMModal.equals("Yes")) {
 			// VCM_Reg_Auto_002_&_003
 			VIPVCMPage.contents.VCMModal.verifyDisplayed(true, 40);
