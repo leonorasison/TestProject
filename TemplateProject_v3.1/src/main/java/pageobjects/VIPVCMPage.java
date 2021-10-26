@@ -673,7 +673,7 @@ public class VIPVCMPage extends PageBase{
 			SelectionTab1 = new Element("EV Impact Tab", By.xpath("(//*[@class='summary-tabs-item'])[1]"), this);
 			SelectionTab2 = new Element("Prioritization Matrix Tab", By.xpath("(//*[@class='summary-tabs-item'])[2]"), this);
 			SelectionTab3 = new Element("P&L Impact Tab", By.xpath("(//*[@class='summary-tabs-item'])[3]"), this);
-			SelectedTab = new Element("Step 3 Selected Tab", By.xpath("//*[@class='//*[@class='class= summary-tabs-selected']']"), this);
+			SelectedTab = new Element("Step 3 Selected Tab", By.xpath("//*[@class='ng-star-inserted summary-tabs-selected']"), this);
 			SelectedTabDefault = new Element("Step 3 Selected Tab", By.xpath("//*[@class='summary-tabs-selected ng-star-inserted']"), this);
 			SelectionTab4 = new Element("FCF Impact Tab", By.xpath("(//*[@class='summary-tabs-item'])[4]"), this);
 			CompanyCurrency = new Element("Company Currency", By.xpath("//*[@class='evIsoCode']"), this);
