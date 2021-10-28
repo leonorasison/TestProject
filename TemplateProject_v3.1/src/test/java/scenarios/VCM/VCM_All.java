@@ -23,7 +23,7 @@ public class VCM_All extends TestBase {
 		ReportLog.setTestName("VCM - Step 1");
 		TestDataHandler testDataHandler = TestDataHandler.loadTestData("Sheet", "RowSelection='Test1'");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_001 - Verify VALUE CASE MODELER  in Side Menu");
+		ReportLog.setTestCase("VCM_Reg_Auto_001 - Verify if 'VALUE CASE MODELER' is available in Side Menu");
 		VIP_Common.LogInPage(testDataHandler);
 		Thread.sleep(3000);
 		VIPLandingPage.contents.WhatsNewModal.waitForExist(true, 25);
@@ -59,7 +59,7 @@ public class VCM_All extends TestBase {
 		Thread.sleep(3000);
 		VIPVCMPage.contents.SideMenuVCM.verifyDisplayed(true, 60);
 		Thread.sleep(3000);
-		WebControl.takeScreenshot("VCM_Reg_Auto_001 - Verify VALUE CASE MODELER  in Side Menu");
+		WebControl.takeScreenshot("VCM_Reg_Auto_001 - Verify if 'VALUE CASE MODELER' is available in Side Menu");
 
 		ReportLog.setTestCase("VCM_Reg_Auto_002 - Verify display of Select Value Creation Opportunites page ");
 		VIPLandingPage.contents.HelpIcon.hover();
@@ -100,7 +100,7 @@ public class VCM_All extends TestBase {
 		WebControl.takeScreenshot("VCM_Reg_Auto_004 - Verify elements in VCM Modal");	
 		
 		// VCM_Reg_Auto_005
-		ReportLog.setTestCase("VCM_Reg_Auto_005 - Verify 'Do not show this message again checkbox' in VCM Modal");
+		ReportLog.setTestCase("VCM_Reg_Auto_005 - Verify 'Do not show this message again' checkbox in VCM Modal");
 			VIPVCMPage.contents.VCMModalDoNotShowCheckbox.verifyDisplayed(true);
 			VIPVCMPage.contents.VCMModalDoNotShowText.verifyText("Do not show this message again");
 			VIPVCMPage.contents.VCMModalDoNotShowCheckbox.verifyDisplayed(true);
@@ -143,7 +143,7 @@ public class VCM_All extends TestBase {
 		VIPVCMPage.contents.NextButtonNote.verifyText("Select atleast one VCO");
 		WebControl.takeScreenshot("VCM_Reg_Auto_008 - Verify Next Button behaviors");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_009 - Verify Step 1, Step 2 and Step 3 Progress Bar");
+		ReportLog.setTestCase("VCM_Reg_Auto_009 - Verify Progress Bar while in Step 1");
 		VIPVCMPage.contents.SelectedProgressBar.verifyDisplayed(true, 5);
 		VIPVCMPage.contents.UnselectedProgressBar1.verifyDisplayed(false);
 		VIPVCMPage.contents.UnselectedProgressBar2.verifyDisplayed(false);
@@ -155,7 +155,7 @@ public class VCM_All extends TestBase {
 		VIPVCMPage.contents.ProgressBarStep3.verifyText("STEP 3");
 		WebControl.takeScreenshot("VCM_Reg_Auto_009 - Verify Step 1, Step 2 and Step 3 Progress Bar");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_010 - Verify Step 1 VCO Categories and Add Custom VCO");
+		ReportLog.setTestCase("VCM_Reg_Auto_010 - Verify Segment Headers in VCO Categories and Add Custom VCO");
 		VIPVCMPage.contents.SegmentHeader1.verifyDisplayed(true, 5);
 		VIPVCMPage.contents.SegmentHeader1.verifyText("Cost Reduction");
 		VIPVCMPage.contents.SegmentHeader2.verifyDisplayed(true, 5);
@@ -164,9 +164,9 @@ public class VCM_All extends TestBase {
 		VIPVCMPage.contents.SegmentHeader3.verifyText("Asset Efficiency");
 		VIPVCMPage.contents.SegmentHeader4.verifyDisplayed(true, 5);
 		VIPVCMPage.contents.SegmentHeader4.verifyText("Add Custom VCO");
-		WebControl.takeScreenshot("VCM_Reg_Auto_010 - Verify Step 1 VCO Categories and Add Custom VCO");
+		WebControl.takeScreenshot("VCM_Reg_Auto_010 - Verify Segment Headers in VCO Categories and Add Custom VCO");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_011 - Verify Step 1 COMPANY PERFORMANCE");
+		ReportLog.setTestCase("VCM_Reg_Auto_011 - Verify Select VCO Section Headers");
 		VIPVCMPage.contents.SectionHeader1.verifyDisplayed(true, 5);
 		VIPVCMPage.contents.SectionHeader1.verifyText("COMPANY PERFORMANCE");
 		VIPVCMPage.contents.SectionHeader2.verifyDisplayed(true, 5);
@@ -430,7 +430,7 @@ public class VCM_All extends TestBase {
 		VIPVCMPage.contents.RGVCOPOCheckboxT.verifyDisplayed(true, 3);
 		WebControl.takeScreenshot("VCM_Reg_Auto_015 - Verify 'Revenue Growth' VCO selections");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_016");
+		ReportLog.setTestCase("VCM_Reg_Auto_016 - Verify 'Asset Efficiency' COMPANY PERFORMANCE");
 		// Net PP&E / Revenue
 		VIPVCMPage.contents.KPINameNetPPE.verifyText("Net PP&E / Revenue");
 		VIPVCMPage.contents.KPINetPPE.verifyText(NetPPEKPIT1);
@@ -478,9 +478,9 @@ public class VCM_All extends TestBase {
 		VIPVCMPage.contents.WorstLegendText3.verifyDisplayed(true, 3);
 		VIPVCMPage.contents.WorstLegendText3.verifyText("Worse than Peer Median");
 		VIPVCMPage.contents.WorstLegendCircle3.verifyDisplayed(true, 3);
-		WebControl.takeScreenshot("VCM_Reg_Auto_016");
+		WebControl.takeScreenshot("VCM_Reg_Auto_016 - Verify 'Asset Efficiency' COMPANY PERFORMANCE");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_017");
+		ReportLog.setTestCase("VCM_Reg_Auto_017 - Verify 'Asset Efficiency' VCO selections");
 		// NPR
 		VIPVCMPage.contents.AEVCONPR.verifyDisplayed(true, 3);
 		VIPVCMPage.contents.AEVCONPR.verifyText("Net PP&E Rationalization");
@@ -548,23 +548,23 @@ public class VCM_All extends TestBase {
 		VIPVCMPage.contents.AEVCONPR.click();
 		VIPVCMPage.contents.AEVCONPRCheckboxU.verifyDisplayed(false);
 		VIPVCMPage.contents.AEVCONPRCheckboxT.verifyDisplayed(true, 3);
-		WebControl.takeScreenshot("VCM_Reg_Auto_017");
+		WebControl.takeScreenshot("VCM_Reg_Auto_017 - Verify 'Asset Efficiency' VCO selections");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_018");
+		ReportLog.setTestCase("VCM_Reg_Auto_018 - Verify elements in Add Custom VCO");
 		VIPVCMPage.contents.VCOName.verifyDisplayed(true, 3);
 		VIPVCMPage.contents.VCOCategory.verifyDisplayed(true, 3);
 		VIPVCMPage.contents.VCODescription.verifyDisplayed(true, 3);
 		VIPVCMPage.contents.VCOAddDisabled.verifyDisplayed(true, 3);
-		WebControl.takeScreenshot("VCM_Reg_Auto_018");
+		WebControl.takeScreenshot("VCM_Reg_Auto_018 - Verify elements in Add Custom VCO");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_019");
+		ReportLog.setTestCase("VCM_Reg_Auto_019 - Verify selections in VCO Catergory DDL");
 		VIPVCMPage.contents.VCOCategory.click();
 		VIPVCMPage.contents.VCOCategory1.verifyText("Cost Reduction");
 		VIPVCMPage.contents.VCOCategory2.verifyText("Revenue Growth");
 		VIPVCMPage.contents.VCOCategory3.verifyText("Asset Efficiency");
-		WebControl.takeScreenshot("VCM_Reg_Auto_019");
+		WebControl.takeScreenshot("VCM_Reg_Auto_019 - Verify selections in VCO Catergory DDL");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_020");
+		ReportLog.setTestCase("VCM_Reg_Auto_020 - Verify adding of Custom VCO");
 		VIPVCMPage.contents.VCOCategory1.click();
 		VIPVCMPage.contents.VCOName.sendKeys("Test");
 		VIPVCMPage.contents.VCODescription.sendKeys("Testing");
@@ -577,9 +577,9 @@ public class VCM_All extends TestBase {
 		VIPVCMPage.contents.AddedVCODescription1.verifyText("Testing");
 		VIPVCMPage.contents.AddedVCOEditButton1.verifyDisplayed(true, 3);
 		VIPVCMPage.contents.AddedVCODeleteButton1.verifyDisplayed(true, 3);
-		WebControl.takeScreenshot("VCM_Reg_Auto_020");
+		WebControl.takeScreenshot("VCM_Reg_Auto_020 - Verify adding of Custom VCO");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_021");
+		ReportLog.setTestCase("VCM_Reg_Auto_021 - Verify editing of Custom VCO");
 		VIPVCMPage.contents.AddedVCOEditButton1.click();
 		VIPVCMPage.contents.VCOName.clear();
 		VIPVCMPage.contents.VCOName.sendKeys("Test 1");
@@ -598,9 +598,9 @@ public class VCM_All extends TestBase {
 		VIPVCMPage.contents.AddedVCODescription1.verifyDisplayed(false);
 		VIPVCMPage.contents.AddedVCOEditButton1.verifyDisplayed(false);
 		VIPVCMPage.contents.AddedVCODeleteButton1.verifyDisplayed(false);
-		WebControl.takeScreenshot("VCM_Reg_Auto_021_2");
+		WebControl.takeScreenshot("VCM_Reg_Auto_021 - Verify editing of Custom VCO");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_022");
+		ReportLog.setTestCase("VCM_Reg_Auto_022 - Verify adding of Custom VCO without Description");
 		VIPVCMPage.contents.VCOName.sendKeys("Test");
 		VIPVCMPage.contents.VCOCategory.click();
 		VIPVCMPage.contents.VCOCategory2.click();
@@ -608,9 +608,9 @@ public class VCM_All extends TestBase {
 		VIPVCMPage.contents.AddedVCOName1.verifyText("Test");
 		VIPVCMPage.contents.AddedVCOCategory1.verifyText("Revenue Growth");
 		VIPVCMPage.contents.AddedVCODescription1.verifyText("");
-		WebControl.takeScreenshot("VCM_Reg_Auto_022");
+		WebControl.takeScreenshot("VCM_Reg_Auto_022 - Verify adding of Custom VCO without Description");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_023");
+		ReportLog.setTestCase("VCM_Reg_Auto_023 - Verify COMPANY PERFORMANCE Tooltip");
 		VIPLandingPage.contents.HelpIcon.hover();
 		// COGS
 		VIPVCMPage.contents.CircleCOGS.hover();
@@ -660,7 +660,7 @@ public class VCM_All extends TestBase {
 		VIPVCMPage.contents.VCMKPITTooltipText.verifyText(InvRevKPIT1);
 		VIPVCMPage.contents.VCMKPIPHeaderTooltipText.verifyText("Peer Median");
 		VIPVCMPage.contents.VCMKPIPTooltipText.verifyText(InvRevKPIP1);
-		WebControl.takeScreenshot("VCM_Reg_Auto_023");
+		WebControl.takeScreenshot("VCM_Reg_Auto_023 - Verify COMPANY PERFORMANCE Tooltip");
 
 		ReportLog.setTestCase("VCM_Reg_Auto_024 - Verify prompt 'The Value Case Modeler is available for publicly listed companies only.' ");
 		VIPLandingPage.contents.HelpIcon.hover();
@@ -735,7 +735,7 @@ public class VCM_All extends TestBase {
 		ReportLog.setTestName("VCM - Step 2");
 		TestDataHandler testDataHandler = TestDataHandler.loadTestData("Sheet", "RowSelection='Test1'");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_026");
+		ReportLog.setTestCase("VCM_Reg_Auto_026 - Verify Progress Bar while in Step 2");
 		VIPLandingPage.contents.HelpIcon.hover();
 		VIPOverviewPage.contents.BackToSearchButton.hover();
 		VIPOverviewPage.contents.BackToSearchButton.click();
@@ -767,9 +767,9 @@ public class VCM_All extends TestBase {
 		VIPVCMPage.contents.VCMBodyTitle.verifyText("Input Assumptions");
 		VIPVCMPage.contents.SelectedProgressBar.verifyDisplayed(true, 5);
 		VIPVCMPage.contents.UnselectedProgressBar1.verifyDisplayed(true, 5);
-		WebControl.takeScreenshot("VCM_Reg_Auto_026");
+		WebControl.takeScreenshot("VCM_Reg_Auto_026 - Verify Progress Bar while in Step 2");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_027");
+		ReportLog.setTestCase("VCM_Reg_Auto_027 - Verify Next Button behaviors");
 		VIPVCMPage.contents.NextButtonDisabled.verifyDisplayed(true, 5);
 		VIPVCMPage.contents.NextButtonNote.verifyDisplayed(true, 5);
 		VIPVCMPage.contents.NextButtonNote.verifyText("Enter assumptions for all VCOs");
@@ -789,9 +789,9 @@ public class VCM_All extends TestBase {
 		VIPVCMPage.contents.NextButtonEnabled.verifyDisplayed(true, 25);
 		VIPVCMPage.contents.NextButtonNote.verifyDisplayed(false);
 		VIPVCMPage.contents.NextButtonDoneNote.verifyDisplayed(true, 5);
-		WebControl.takeScreenshot("VCM_Reg_Auto_027");
+		WebControl.takeScreenshot("VCM_Reg_Auto_027 - Verify Next Button behaviors");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_028");
+		ReportLog.setTestCase("VCM_Reg_Auto_028 - Verify elements in OVERALL DCF ASSUMPTIONS");
 		VIPVCMPage.contents.Accordion1.click();
 		VIPVCMPage.contents.WACCTextbox.verifyDisplayed(true, 5);
 		VIPVCMPage.contents.TerminalGrowthRateTextbox.verifyDisplayed(true, 5);
@@ -805,16 +805,16 @@ public class VCM_All extends TestBase {
 		VIPVCMPage.contents.EnterpriseValueTooltip.click();
 		VIPVCMPage.contents.VCMInputTooltipText.verifyDisplayed(true, 5);
 		VIPVCMPage.contents.EnterpriseValueTooltip.click();
-		WebControl.takeScreenshot("VCM_Reg_Auto_028");
+		WebControl.takeScreenshot("VCM_Reg_Auto_028 - Verify elements in OVERALL DCF ASSUMPTIONS");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_029");
+		ReportLog.setTestCase("VCM_Reg_Auto_029 - Verify editing of WACC");
 		VIPVCMPage.contents.WACCEditIcon.verifyDisplayed(true, 5);
 		VIPVCMPage.contents.WACCEditIcon.click();
 		VIPVCMPage.contents.WACCTextbox.clear();
 		VIPVCMPage.contents.WACCTextbox.sendKeys("10.0");
-		WebControl.takeScreenshot("VCM_Reg_Auto_029");
+		WebControl.takeScreenshot("VCM_Reg_Auto_029 - Verify editing of WACC");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_030");
+		ReportLog.setTestCase("VCM_Reg_Auto_030 - Verify elements in 'Review Enterprise Value Dissection' modal");
 		VIPVCMPage.contents.EnterpriseValueEditIcon.click();
 		VIPVCMPage.contents.EditEVModal.verifyDisplayed(true, 5);
 		VIPVCMPage.contents.EditEVModalHeader.verifyText("Review Enterprise Value Dissection");
@@ -858,9 +858,9 @@ public class VCM_All extends TestBase {
 		VIPVCMPage.contents.LongTermInvestmentsTextbox.verifyEnabled(false);
 		VIPVCMPage.contents.OperatingEVLabel.verifyText("(=) Operating EV");
 		VIPVCMPage.contents.OperatingEVTextbox.verifyEnabled(false);
-		WebControl.takeScreenshot("VCM_Reg_Auto_030");
+		WebControl.takeScreenshot("VCM_Reg_Auto_030 - Verify elements in 'Review Enterprise Value Dissection' modal");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_031");
+		ReportLog.setTestCase("VCM_Reg_Auto_031 - Verify Edit function in 'Review Enterprise Value Dissection' modal");
 		VIPVCMPage.contents.EditEVModalEditIcon.verifyDisplayed(true, 5);
 		VIPVCMPage.contents.EditEVModalEditIcon.click();
 		VIPVCMPage.contents.MarketCapitalizationTextbox.verifyEnabled(true);
@@ -871,9 +871,9 @@ public class VCM_All extends TestBase {
 		VIPVCMPage.contents.TotalEVTextbox.verifyEnabled(false);
 		VIPVCMPage.contents.LongTermInvestmentsTextbox.verifyEnabled(true);
 		VIPVCMPage.contents.OperatingEVTextbox.verifyEnabled(false);
-		WebControl.takeScreenshot("VCM_Reg_Auto_031");
+		WebControl.takeScreenshot("VCM_Reg_Auto_031 - Verify Edit function in 'Review Enterprise Value Dissection' modal");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_032");
+		ReportLog.setTestCase("VCM_Reg_Auto_032 - Verify Chart in 'Review Enterprise Value Dissection' modal");
 		VIPVCMPage.contents.MarketCapitalizationLabelR.verifyText("Market Capitalization");
 		VIPVCMPage.contents.MinorityInterestLabelR.verifyText("Minority Interest");
 		VIPVCMPage.contents.TotalDebtLabelR.verifyText("Total Debt");
@@ -883,13 +883,13 @@ public class VCM_All extends TestBase {
 		VIPVCMPage.contents.LongTermInvestmentsLabelR.verifyText("Long Term Investments");
 		VIPVCMPage.contents.OperatingEVLabelR.verifyText("Operating EV");
 		VIPVCMPage.contents.EditEVModalProceedButton.click();
-		WebControl.takeScreenshot("VCM_Reg_Auto_032");
+		WebControl.takeScreenshot("VCM_Reg_Auto_032 - Verify Chart in 'Review Enterprise Value Dissection' modal");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_033");
+		ReportLog.setTestCase("VCM_Reg_Auto_033 - Verify 'VCO ASSUMPTION' accordion button");
 		VIPVCMPage.contents.Accordion2.click();
-		WebControl.takeScreenshot("VCM_Reg_Auto_033");
+		WebControl.takeScreenshot("VCM_Reg_Auto_033 - Verify 'VCO ASSUMPTION' accordion button");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_034");
+		ReportLog.setTestCase("VCM_Reg_Auto_034 - Verify selected VCO from Step 1 in VCO ASSUMPTION DDL");
 		VIPLandingPage.contents.HelpIcon.hover();
 		VIPVCMPage.contents.BackButton.click();
 		VIPVCMPage.contents.CRVCOCOGS.click();
@@ -915,9 +915,9 @@ public class VCM_All extends TestBase {
 		VIPVCMPage.contents.VCOCategoryFRC.verifyText("Faster Receivables Collection");
 		VIPVCMPage.contents.VCOCategoryVR.verifyText("Vendor Rationalization");
 		VIPVCMPage.contents.VCOCategoryIR.verifyText("Inventory Rationalization");
-		WebControl.takeScreenshot("VCM_Reg_Auto_034");
+		WebControl.takeScreenshot("VCM_Reg_Auto_034 - Verify selected VCO from Step 1 in VCO ASSUMPTION DDL");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_035");
+		ReportLog.setTestCase("VCM_Reg_Auto_035 - Verify Price Optimization 'REFERENCE DATA' column 1");
 		VIPLandingPage.contents.HelpIcon.hover();
 		VIPOverviewPage.contents.SideMenuOverview.click();
 		VIPLandingPage.contents.HelpIcon.hover();
@@ -1001,27 +1001,27 @@ public class VCM_All extends TestBase {
 		} else {
 			VIPVCMPage.contents.ReferenceDataValue1_2.verifyText(CAGR2Yr);
 		}
-		WebControl.takeScreenshot("VCM_Reg_Auto_035");
+		WebControl.takeScreenshot("VCM_Reg_Auto_035 - Verify Price Optimization 'REFERENCE DATA' column 1");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_036");
+		ReportLog.setTestCase("VCM_Reg_Auto_036 - Verify COGS 'REFERENCE DATA' column 1");
 		VIPLandingPage.contents.HelpIcon.hover();
 		VIPVCMPage.contents.VCOAssumptionDropdown.click();
 		VIPVCMPage.contents.VCOCategoryCOGS.click();
 		VIPVCMPage.contents.ReferenceDataName1_1.verifyText("COGS in " + Period);
 //		VIPVCMPage.contents.ReferenceDataValue1_1.verifyText(COGS + " " + Revenue[0] + " bn"); Lsison, 20211020, For confirmation
 		VIPVCMPage.contents.ReferenceDataValue1_1.verifyText("0.4 USD bn"); //Lsison, 20211020, Temp hardcode
-		WebControl.takeScreenshot("VCM_Reg_Auto_036");
+		WebControl.takeScreenshot("VCM_Reg_Auto_036 - Verify COGS 'REFERENCE DATA'");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_037");
+		ReportLog.setTestCase("VCM_Reg_Auto_037 - Verify SGA 'REFERENCE DATA' column 1");
 		VIPLandingPage.contents.HelpIcon.hover();
 		VIPVCMPage.contents.VCOAssumptionDropdown.click();
 		VIPVCMPage.contents.VCOCategorySGA.click();
 		VIPVCMPage.contents.ReferenceDataName1_1.verifyText("SG&A in " + Period);
 //		VIPVCMPage.contents.ReferenceDataValue1_1.verifyText(SGA + " " + Revenue[0] + " bn"); Lsison, 20211020, For confirmation
 		VIPVCMPage.contents.ReferenceDataValue1_1.verifyText("0.8 USD bn"); //Lsison, 20211020, Temp hardcode
-		WebControl.takeScreenshot("VCM_Reg_Auto_037");
+		WebControl.takeScreenshot("VCM_Reg_Auto_037 - Verify SGA 'REFERENCE DATA' column 1");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_038");
+		ReportLog.setTestCase("VCM_Reg_Auto_038 - Verify ORG 'REFERENCE DATA' column 1");
 		VIPLandingPage.contents.HelpIcon.hover();
 		VIPVCMPage.contents.BackButton.click(); // Lsison, 20211018, Change unable to locate VCOAssumptionDropdown to BackButton
 		VIPVCMPage.contents.NextButtonEnabled.click(); // Lsison, 20211018, To go back to Step2 page related to changes above
@@ -1034,9 +1034,9 @@ public class VCM_All extends TestBase {
 		VIPVCMPage.contents.ReferenceDataName1_2.verifyText("SG&A in " + Period);
 //		VIPVCMPage.contents.ReferenceDataValue1_2.verifyText(SGA + " " + Revenue[0] + " bn");  Lsison, 20211020, For confirmation
 		VIPVCMPage.contents.ReferenceDataValue1_2.verifyText("0.8 USD bn"); 
-		WebControl.takeScreenshot("VCM_Reg_Auto_038");
+		WebControl.takeScreenshot("VCM_Reg_Auto_038 - Verify ORG 'REFERENCE DATA' column 1");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_039");
+		ReportLog.setTestCase("VCM_Reg_Auto_039 - Verify Price Optimization 'REFERENCE DATA' column 2");
 		VIPLandingPage.contents.HelpIcon.hover();
 		VIPVCMPage.contents.VCOAssumptionDropdown.click();
 		VIPVCMPage.contents.VCOCategoryPO.click();
@@ -1049,41 +1049,41 @@ public class VCM_All extends TestBase {
 		} else {
 			VIPVCMPage.contents.ReferenceDataValue2_2.verifyText(EBITME + "pps");
 		}
-		WebControl.takeScreenshot("VCM_Reg_Auto_039");
+		WebControl.takeScreenshot("VCM_Reg_Auto_039 - Verify Price Optimization 'REFERENCE DATA' column 2");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_040");
+		ReportLog.setTestCase("VCM_Reg_Auto_040 - Verify Net PP&E Rationalization 'REFERENCE DATA' column 2");
 		VIPLandingPage.contents.HelpIcon.hover();
 		VIPVCMPage.contents.VCOAssumptionDropdown.click();
 		VIPVCMPage.contents.VCOCategoryNPR.click();
 		VIPVCMPage.contents.ReferenceDataName2_1.verifyText("Net PP&E/Revenue in " + Period);
 		VIPVCMPage.contents.ReferenceDataValue2_1.verifyText(NetPPE);
-		WebControl.takeScreenshot("VCM_Reg_Auto_040");
+		WebControl.takeScreenshot("VCM_Reg_Auto_040 - Verify Net PP&E Rationalization 'REFERENCE DATA' column 2");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_041");
+		ReportLog.setTestCase("VCM_Reg_Auto_041 - Verify Faster Receivable Collection 'REFERENCE DATA' column 2");
 		VIPLandingPage.contents.HelpIcon.hover();
 		VIPVCMPage.contents.VCOAssumptionDropdown.click();
 		VIPVCMPage.contents.VCOCategoryFRC.click();
 		VIPVCMPage.contents.ReferenceDataName2_1.verifyText("Receivables/Revenue in " + Period);
 		VIPVCMPage.contents.ReferenceDataValue2_1.verifyText(NetRec);
-		WebControl.takeScreenshot("VCM_Reg_Auto_041");
+		WebControl.takeScreenshot("VCM_Reg_Auto_041 - Verify Faster Receivable Collection 'REFERENCE DATA' column 2");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_042");
+		ReportLog.setTestCase("VCM_Reg_Auto_042 - Verify Vendor Rationalization 'REFERENCE DATA' column 2");
 		VIPLandingPage.contents.HelpIcon.hover();
 		VIPVCMPage.contents.VCOAssumptionDropdown.click();
 		VIPVCMPage.contents.VCOCategoryVR.click();
 		VIPVCMPage.contents.ReferenceDataName2_1.verifyText("Payables/Revenue in " + Period);
 		VIPVCMPage.contents.ReferenceDataValue2_1.verifyText(AccPay);
-		WebControl.takeScreenshot("VCM_Reg_Auto_042");
+		WebControl.takeScreenshot("VCM_Reg_Auto_042 - Verify Vendor Rationalization 'REFERENCE DATA' column 2");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_043");
+		ReportLog.setTestCase("VCM_Reg_Auto_043 - Verify Inventory Rationalization 'REFERENCE DATA' column 2");
 		VIPLandingPage.contents.HelpIcon.hover();
 		VIPVCMPage.contents.VCOAssumptionDropdown.click();
 		VIPVCMPage.contents.VCOCategoryIR.click();
 		VIPVCMPage.contents.ReferenceDataName2_1.verifyText("Inventory/Revenue in " + Period);
 		VIPVCMPage.contents.ReferenceDataValue2_1.verifyText(InvRev);
-		WebControl.takeScreenshot("VCM_Reg_Auto_043");
+		WebControl.takeScreenshot("VCM_Reg_Auto_043 - Verify Inventory Rationalization 'REFERENCE DATA' column 2");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_044");
+		ReportLog.setTestCase("VCM_Reg_Auto_044 - Verify textboxes in VCA ASSUMPTIONS");
 		VIPLandingPage.contents.HelpIcon.hover();
 		VIPVCMPage.contents.VCOAssumptionDropdown.click();
 		VIPVCMPage.contents.VCOCategorySGA.click();
@@ -1093,18 +1093,18 @@ public class VCM_All extends TestBase {
 		VIPVCMPage.contents.RecurringOpexAddressableSGATextbox.verifyDisplayed(true, 5);
 		VIPVCMPage.contents.VCOImplementationCapexTextbox.verifyDisplayed(true, 5);
 		VIPVCMPage.contents.CapexSpendingPeriodTextbox.verifyDisplayed(true, 5);
-		WebControl.takeScreenshot("VCM_Reg_Auto_044");
+		WebControl.takeScreenshot("VCM_Reg_Auto_044 - Verify textboxes in VCA ASSUMPTIONS");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_045");
+		ReportLog.setTestCase("VCM_Reg_Auto_045 - Verify EASE OF IMPLEMENTATION in VCA ASSUMPTION");
 		VIPVCMPage.contents.EaseOfImplementation1.verifyDisplayed(true, 5);
 		VIPVCMPage.contents.EaseOfImplementation2.verifyDisplayed(true, 5);
 		VIPVCMPage.contents.EaseOfImplementation3.verifyDisplayed(true, 5);
 		VIPVCMPage.contents.EaseOfImplementation4.verifyDisplayed(true, 5);
 		VIPVCMPage.contents.EaseOfImplementation5.verifyDisplayed(true, 5);
 		VIPVCMPage.contents.EaseOfImplementation6.verifyDisplayed(true, 5);
-		WebControl.takeScreenshot("VCM_Reg_Auto_045");
+		WebControl.takeScreenshot("VCM_Reg_Auto_045 - Verify EASE OF IMPLEMENTATION in VCA ASSUMPTION");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_046");
+		ReportLog.setTestCase("VCM_Reg_Auto_046 - Verify calculating of VCO ASSUMPTION and Chart display");
 		VIPLandingPage.contents.HelpIcon.hover();
 		VIPVCMPage.contents.BackButton.click(); // Lsison, 20211018, Change unable to locate VCOAssumptionDropdown to
 												// BackButton
@@ -1126,19 +1126,19 @@ public class VCM_All extends TestBase {
 		VIPVCMPage.contents.CalculateEnabled.click();
 		VIPVCMPage.contents.Chart1.verifyDisplayed(true, 25);
 		VIPVCMPage.contents.Chart2.verifyDisplayed(true, 25);
-		WebControl.takeScreenshot("VCM_Reg_Auto_046");
+		WebControl.takeScreenshot("VCM_Reg_Auto_046 - Verify calculating of VCO ASSUMPTION and Chart display");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_047");
+		ReportLog.setTestCase("VCM_Reg_Auto_047 - Verify if 'Back' button is enabled in Step 2");
 		VIPLandingPage.contents.HelpIcon.hover();
 		VIPVCMPage.contents.BackButton.verifyDisplayed(true, 3);
 		WebControl.takeScreenshot("VCM_Reg_Auto_047");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_048");
+		ReportLog.setTestCase("VCM_Reg_Auto_048 - Verify if user return to Step 1 upon clicking 'Back' button");
 		VIPVCMPage.contents.BackButton.click();
-		VIPVCMPage.contents.SegmentHeader1.verifyDisplayed(true, 5);
-		WebControl.takeScreenshot("VCM_Reg_Auto_048");
+		VIPVCMPage.contents.VCMBodyTitle.verifyText("Select Value Creation Opportunities (VCO)");
+		WebControl.takeScreenshot("VCM_Reg_Auto_048 - Verify if user will be redirected to Step 1 upon clicking 'Back' button");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_049");
+		ReportLog.setTestCase("VCM_Reg_Auto_049 - Verify Price Optimization 'REFERENCE DATA' column 3");
 		VIPLandingPage.contents.HelpIcon.hover();
 		VIPOverviewPage.contents.BackToSearchButton.hover();
 		VIPOverviewPage.contents.BackToSearchButton.click();
@@ -1149,7 +1149,7 @@ public class VCM_All extends TestBase {
 		Thread.sleep(3000);
 		VIPLandingPage.contents.CompanyTypeAhead.waitForExist(true, 20);
 		Thread.sleep(3000);
-		VIPLandingPage.contents.CompanyTypeAhead.verifyDisplayed(true, 20);
+		VIPLandingPage.contents.CompanyTypeAhead.verifyDisplayed(true, 60);
 		VIPLandingPage.contents.CompanyTypeAhead.customJavaClick();
 		Thread.sleep(1000);
 		VIPOverviewPage.contents.OverviewTitle.waitForExist(true, 60);
@@ -1172,9 +1172,20 @@ public class VCM_All extends TestBase {
 //		VIPVCMPage.contents.ReferenceDataValue1_1.verifyDisplayed(true, 3);
 //		VIPVCMPage.contents.ReferenceDataName1_2.verifyDisplayed(false);
 //		VIPVCMPage.contents.ReferenceDataValue1_2.verifyDisplayed(false);
-		WebControl.takeScreenshot("VCM_Reg_Auto_049");
+		
+		//Lsison, 20211027, Add checking for REFERENCE DATA column 3
+		VIPVCMPage.contents.ReferenceDataName3_1.verifyText("Capex in " + Period);
+		//VIPVCMPage.contents.ReferenceDataValue3_1.verifyText(EBITMargin);
+//		VIPVCMPage.contents.ReferenceDataName3_2.verifyText("Capex chg. forecast (" + Period2 + "– " + Period3 + ")");  Lsison, 20211021, For confirmation
+		VIPVCMPage.contents.ReferenceDataName3_2.verifyText("Capex chg. forecast (2021– 23E)");  //Lsison, 20211021, Temp hardcode
+		/*
+		 * if (EBITME3 >= 0) { VIPVCMPage.contents.ReferenceDataValue3_2.verifyText("+"
+		 * + EBITME + "pps"); } else {
+		 * VIPVCMPage.contents.ReferenceDataValue3_2.verifyText(EBITME + "pps"); }
+		 */
+		WebControl.takeScreenshot("VCM_Reg_Auto_049 - Verify Price Optimization 'REFERENCE DATA' column 3");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_050");
+		ReportLog.setTestCase("VCM_Reg_Auto_050 - Verify ENTERPRISE VAUE IMPACT Chart");
 		VIPVCMPage.contents.AddressableSGATextbox.sendKeys("1");
 		VIPVCMPage.contents.SGAReductionTextbox.sendKeys("1");
 		VIPVCMPage.contents.YearsForCostReductionTextbox.sendKeys("1");
@@ -1186,11 +1197,11 @@ public class VCM_All extends TestBase {
 		Thread.sleep(3000); // Lsison, 20211018, Add sleep for chart to load
 		VIPVCMPage.contents.Chart1.waitForExist(true, 30);
 		VIPVCMPage.contents.Chart1SubTitle1.verifyText(Revenue[0] + " 0.0 bn");
-		WebControl.takeScreenshot("VCM_Reg_Auto_050");
+		WebControl.takeScreenshot("VCM_Reg_Auto_050 - Verify ENTERPRISE VAUE IMPACT Chart");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_051");
+		ReportLog.setTestCase("VCM_Reg_Auto_051 - Verify ENTERPRISE VAUE IMPACT Chart Percent Value");
 		VIPVCMPage.contents.Chart1SubTitle2.verifyText("0.0%");
-		WebControl.takeScreenshot("VCM_Reg_Auto_051");
+		WebControl.takeScreenshot("VCM_Reg_Auto_051 - Verify ENTERPRISE VAUE IMPACT Chart Percent Value");
 
 	}
 
@@ -1199,39 +1210,10 @@ public class VCM_All extends TestBase {
 		ReportLog.setTestName("VCM - Step 3");
 		TestDataHandler testDataHandler = TestDataHandler.loadTestData("Sheet", "RowSelection='Test1'");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_052");
-		VIPLandingPage.contents.HelpIcon.hover();
-		Thread.sleep(2000);
-
-		// Lsison, 20211019, Add save report function and save exit modal
-		VIPOverviewPage.contents.SaveCompanyButton.click();
-		Thread.sleep(15000);
-		VIPOverviewPage.contents.SaveReportInVIPCloseButton.click();
-		Thread.sleep(1000);
-		VIPOverviewPage.contents.SaveCompanyButton.click();
-		Thread.sleep(15000);
-		VIPOverviewPage.contents.SaveReportInVIPButton.click();
-		VIPOverviewPage.contents.SaveReportInVIPToaster.waitForExist(true, 60);
-		VIPOverviewPage.contents.SaveReportInVIPToaster.verifyText("The Report generation may take 5-10 minutes to complete. Once it is completed, you will get another notification and the report will be available in ‘My Reports’ section.");
-		VIPOverviewPage.contents.SaveReportInVIPCloseToasterButton.click();
-		Thread.sleep(100000);
-		VIPOverviewPage.contents.SaveReportInVIPToaster.waitForExist(true, 600);
-		VIPOverviewPage.contents.SaveReportInVIPToaster.verifyText("Your report has been generated successfully");
-		Thread.sleep(4000);
+		ReportLog.setTestCase("VCM_Reg_Auto_052 - Verify initialization of Step 3 'VCO Summary");
 		VIPOverviewPage.contents.BackToSearchButton.hover();
 		VIPOverviewPage.contents.BackToSearchButton.click();
 		VIPOverviewPage.contents.ExitSavePopupYesButton.click();
-
-		// Old code for fixing as noticed by Lsison
-		VIPLandingPage.contents.ReportsTotal.waitForExist(true, 40);
-		VIPLandingPage.contents.CompanyCard1.waitForExist(true, 40);
-		String s1 = VIPLandingPage.contents.ReportsTotal.getText();
-		String s2 = s1.replace("/ ", "");
-		int s3 = Integer.parseInt(s2);
-		int s4 = s3 + 1;
-		String s5 = Integer.toString(s4);
-		String s6 = "/ " + s5;
-
 		VIPLandingPage.contents.CompanyNameTextbox.sendKeys(testDataHandler.company);
 		Thread.sleep(3000);
 		VIPLandingPage.contents.CompanyTypeAhead.waitForExist(true, 20);
@@ -1273,16 +1255,17 @@ public class VCM_All extends TestBase {
 		VIPLandingPage.contents.HelpIcon.hover();
 		VIPVCMPage.contents.NextButtonEnabled.click();
 		VIPVCMPage.contents.VCMBodyTitle.verifyText("VCO Summary");
-		WebControl.takeScreenshot("VCM_Reg_Auto_052");
+		WebControl.takeScreenshot("VCM_Reg_Auto_052 - Verify initialization of Step 3 'VCO Summary");
 
-		/*
-		 * Lsison, 20211019, SAVE button was removed in UI
-		 * ReportLog.setTestCase("VCM_Reg_Auto_053");
-		 * VIPVCMPage.contents.SaveButtonEnabled.verifyDisplayed(true, 5);
-		 * WebControl.takeScreenshot("VCM_Reg_Auto_053");
-		 */
+		
+		 //Lsison, 20211019, SAVE button was removed in UI
+		ReportLog.setTestCase("VCM_Reg_Auto_053 - Verify 'Save Report' on the right side of Company Name in VCM Module");
+		//VIPVCMPage.contents.SaveButtonEnabled.verifyDisplayed(true, 5);
+		VIPOverviewPage.contents.SaveCompanyButton.verifyDisplayed(true, 5);
+		WebControl.takeScreenshot("VCM_Reg_Auto_053");
+		
 
-		ReportLog.setTestCase("VCM_Reg_Auto_054");
+		ReportLog.setTestCase("VCM_Reg_Auto_054 - Verify Progress Bar while in Step 3");
 		VIPVCMPage.contents.ProgressBarStep3.verifyText("STEP 3");
 		VIPVCMPage.contents.SelectedProgressBar.verifyDisplayed(true, 5);
 		VIPVCMPage.contents.ProgressBarStep1.verifyText("STEP 1");
@@ -1291,27 +1274,27 @@ public class VCM_All extends TestBase {
 		VIPVCMPage.contents.UnselectedProgressBar2.verifyDisplayed(true, 5);
 		WebControl.takeScreenshot("VCM_Reg_Auto_054");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_055");
+		ReportLog.setTestCase("VCM_Reg_Auto_055 - Verify present Tabs in Step 3");
 		VIPVCMPage.contents.SelectionTab1.verifyText("EV Impact");
 		VIPVCMPage.contents.SelectionTab2.verifyText("Prioritization Matrix");
 		VIPVCMPage.contents.SelectionTab3.verifyText("P&L Impact");
 		VIPVCMPage.contents.SelectionTab4.verifyText("FCF Impact");
-		WebControl.takeScreenshot("VCM_Reg_Auto_055");
+		WebControl.takeScreenshot("VCM_Reg_Auto_055 - Verify present Tabs in Step 3");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_056");
+		ReportLog.setTestCase("VCM_Reg_Auto_056 - Verify Step 3 default Tab upon initialization");
 		//Lsison, 20211025, Add checking for EV Impact Chart and Tab label
 		VIPVCMPage.contents.SelectedTabDefault.verifyText("EV Impact");
 		VIPVCMPage.contents.Step3Chart.verifyDisplayed(true, 5);
-		WebControl.takeScreenshot("VCM_Reg_Auto_056");
+		WebControl.takeScreenshot("VCM_Reg_Auto_056 - Verify Step 3 default Tab upon initialization");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_057");
+		ReportLog.setTestCase("VCM_Reg_Auto_057 - Verify if user will return to Step 2 upon clicking 'Back' button");
 		VIPVCMPage.contents.BackButton.click();
 		VIPVCMPage.contents.VCMBodyTitle.verifyText("Input Assumptions");
-		WebControl.takeScreenshot("VCM_Reg_Auto_057");
+		WebControl.takeScreenshot("VCM_Reg_Auto_057 - Verify if user will return to Step 2 upon clicking 'Back' button");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_058"); //
-		VIPVCMPage.contents.Accordion2.click(); //
-		VIPVCMPage.contents.VCOAssumptionDropdown.click(); //
+		ReportLog.setTestCase("VCM_Reg_Auto_058 - Verify Company Currency in Step 3 EV Impact Tab"); 
+		VIPVCMPage.contents.Accordion2.click(); 
+		VIPVCMPage.contents.VCOAssumptionDropdown.click(); 
 		VIPVCMPage.contents.VCOCategorySGA.click();
 		VIPLandingPage.contents.HelpIcon.hover();
 		VIPVCMPage.contents.NextButtonEnabled2.click();
@@ -1321,9 +1304,9 @@ public class VCM_All extends TestBase {
 		} else if (Currency[2].equals("M")) {
 			VIPVCMPage.contents.CompanyCurrency.verifyText("(" + Currency[0] + " mn)");
 		}
-		WebControl.takeScreenshot("VCM_Reg_Auto_058");
+		WebControl.takeScreenshot("VCM_Reg_Auto_058 - Verify Company Currency in Step 3 EV Impact Tab"); 
 
-		ReportLog.setTestCase("VCM_Reg_Auto_059");
+		ReportLog.setTestCase("VCM_Reg_Auto_059 - Verify Chart Legends in Step 3 Prioritization Matrix Tab ");
 		VIPVCMPage.contents.SelectionTab2.click();
 		
 		//Lsison, 20211025, Add checking for chart x and y axis label, Add checking for selected Tab and its label
@@ -1345,10 +1328,10 @@ public class VCM_All extends TestBase {
 		VIPVCMPage.contents.AELegendCircle.verifyDisplayed(true, 5);
 		VIPVCMPage.contents.AELegendText.verifyText("Asset Efficiency");
 		
-		WebControl.takeScreenshot("VCM_Reg_Auto_059");
+		WebControl.takeScreenshot("VCM_Reg_Auto_059 - Verify Chart Legends in Step 3 Prioritization Matrix Tab ");
 		
 
-		ReportLog.setTestCase("VCM_Reg_Auto_060");
+		ReportLog.setTestCase("VCM_Reg_Auto_060 - Verify Charts Label in Step 3 P&L Impact Tab");
 		VIPVCMPage.contents.SelectionTab3.click();
 		
 		//Lsison, 20211025, Add test for P&L Tab
@@ -1373,9 +1356,9 @@ public class VCM_All extends TestBase {
 		 * ); VIPVCMPage.contents.VCMSaveModalSaveButton.verifyDisplayed(true, 5);
 		 * VIPVCMPage.contents.VCMSaveModalCloseButton.verifyDisplayed(true, 5);
 		 */
-		 WebControl.takeScreenshot("VCM_Reg_Auto_060");
+		 WebControl.takeScreenshot("VCM_Reg_Auto_060 - Verify Charts Label in Step 3 P&L Impact Tab");
 		 
-		 ReportLog.setTestCase("VCM_Reg_Auto_061");
+		ReportLog.setTestCase("VCM_Reg_Auto_061 - Verify Sub Tabs and Charts in Step 3 FCF Impact");
 		VIPVCMPage.contents.SelectionTab4.click();
 		VIPLandingPage.contents.HelpIcon.hover();
 		VIPVCMPage.contents.SelectedTab.verifyDisplayed(true, 5);
@@ -1392,9 +1375,55 @@ public class VCM_All extends TestBase {
 		/* VIPVCMPage.contents.VCMSaveModalSaveButton.waitForExist(true, 20);
 		 * Thread.sleep(2500); VIPVCMPage.contents.VCMSaveModalSaveButton.click();
 		 * Thread.sleep(1000); VIPVCMPage.contents.VCMSaveModal.verifyDisplayed(false);
-		 */ VIPVCMPage.contents.VCMBodyTitle.verifyText("VCO Summary");
-	 	WebControl.takeScreenshot("VCM_Reg_Auto_061");
+		 * VIPVCMPage.contents.VCMBodyTitle.verifyText("VCO Summary");
+		 */
+	 	WebControl.takeScreenshot("VCM_Reg_Auto_061 - Verify Sub Tabs and Charts in Step 3 FCF Impact");
 		  
+	 	ReportLog.setTestCase("VCM_Reg_Auto_062 - Verify Save Report Modal");
+	 // Lsison, 20211019, Add save report function and save exit modal
+	 		VIPOverviewPage.contents.SaveCompanyButton.click();
+	 		Thread.sleep(15000);
+	 		VIPOverviewPage.contents.SaveCompanyModal.verifyDisplayed(true, 20);
+	 	WebControl.takeScreenshot("VCM_Reg_Auto_062 - Verify Save Report Modal");
+	 		
+	 	ReportLog.setTestCase("VCM_Reg_Auto_063 - Verify elements in Save Report Modal");
+ 		VIPOverviewPage.contents.SaveReportInVIPModalCloseButton.verifyDisplayed(true, 20);
+ 		VIPOverviewPage.contents.SaveCompanyButton.verifyDisplayed(true, 20);
+ 		Thread.sleep(15000);
+ 		WebControl.takeScreenshot("VCM_Reg_Auto_063 - Verify elements in Save Report Modal");
+ 		
+ 		ReportLog.setTestCase("VCM_Reg_Auto_064 - Verify if Save Report Modal will close when clicked X button");
+ 		VIPOverviewPage.contents.SaveReportInVIPModalCloseButton.click();
+ 		WebControl.takeScreenshot("VCM_Reg_Auto_064 - Verify if Save Report Modal will close when clicked X button");
+ 		
+ 		ReportLog.setTestCase("VCM_Reg_Auto_065 - Verify Save Report in progress message");
+	 		VIPOverviewPage.contents.SaveCompanyButton.click();
+	 		Thread.sleep(15000);
+	 		VIPOverviewPage.contents.SaveReportInVIPButton.click();
+	 		VIPOverviewPage.contents.SaveReportInVIPToaster.waitForExist(true, 60);
+	 		VIPOverviewPage.contents.SaveReportInVIPToaster.verifyText("The Report generation may take 5-10 minutes to complete. Once it is completed, you will get another notification and the report will be available in ‘My Reports’ section.");
+	 		VIPOverviewPage.contents.SaveReportInVIPCloseToasterButton.click();
+	 	WebControl.takeScreenshot("VCM_Reg_Auto_065 - Verify report saving in progress Toaster Message");
+	 		
+	 	ReportLog.setTestCase("VCM_Reg_Auto_066 - Verify Save Report success message");
+	 		Thread.sleep(100000);
+	 		VIPOverviewPage.contents.SaveReportInVIPToaster.waitForExist(true, 600);
+	 		VIPOverviewPage.contents.SaveReportInVIPToaster.verifyText("Your report has been generated successfully");
+	 		Thread.sleep(4000);
+	 	WebControl.takeScreenshot("VCM_Reg_Auto_066 - Verify Save Report success message");
+	 		
+//	 		VIPOverviewPage.contents.BackToSearchButton.hover();
+//	 		VIPOverviewPage.contents.BackToSearchButton.click();
+//	 		VIPOverviewPage.contents.ExitSavePopupYesButton.click();
+
+	 		// Old code for fixing as noticed by Lsison
+			/*
+			 * VIPLandingPage.contents.ReportsTotal.waitForExist(true, 40);
+			 * VIPLandingPage.contents.CompanyCard1.waitForExist(true, 40); String s1 =
+			 * VIPLandingPage.contents.ReportsTotal.getText(); String s2 = s1.replace("/ ",
+			 * ""); int s3 = Integer.parseInt(s2); int s4 = s3 + 1; String s5 =
+			 * Integer.toString(s4); String s6 = "/ " + s5;
+			 */
 		/* ReportLog.setTestCase("VCM_Reg_Auto_062");
 		 * VIPVCMPage.contents.SaveButtonEnabled.verifyDisplayed(false);
 		 * VIPVCMPage.contents.SaveButtonDisabled.verifyDisplayed(true, 3);
@@ -1464,7 +1493,7 @@ public class VCM_All extends TestBase {
 		 */
 		//WebControl.takeScreenshot("VCM_Reg_Auto_065");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_066");
+		ReportLog.setTestCase("VCM_Reg_Auto_067 - Verify VCM Help Icon");
 		VIPVCMPage.contents.VCMHelpIcon.verifyDisplayed(true, 5);
 		/*
 		 * VIPVCMPage.contents.NextButtonEnabled2.click();
@@ -1472,38 +1501,40 @@ public class VCM_All extends TestBase {
 		 * VIPVCMPage.contents.NextButtonEnabled2.click();
 		 * VIPVCMPage.contents.VCMHelpIcon.verifyDisplayed(true, 5);
 		 */
-		WebControl.takeScreenshot("VCM_Reg_Auto_066");
+		WebControl.takeScreenshot("VCM_Reg_Auto_067 - Verify VCM Help Icon");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_067");
+		ReportLog.setTestCase("VCM_Reg_Auto_068 - Verify if user will be redirected to previous Step upon clicking 'Back' button");
 		/* Lsison, 20211022, Comment out failed TC
 		 * VIPVCMPage.contents.VCMHelpIcon.click(); Thread.sleep(3000);
 		 * VIPVCMPage.contents.VCMModal.verifyDisplayed(true, 5);
 		 * VIPVCMPage.contents.VCMModalCloseButton.click(); Thread.sleep(1500);
 		 */
 		VIPVCMPage.contents.BackButton.click();
-		VIPVCMPage.contents.VCMHelpIcon.click();
-		Thread.sleep(3000);
-		VIPVCMPage.contents.VCMModal.verifyDisplayed(true, 5);
-		VIPVCMPage.contents.VCMModalCloseButton.click();
-		Thread.sleep(1500);
-		VIPVCMPage.contents.BackButton.click();
-		VIPVCMPage.contents.VCMHelpIcon.click();
-		Thread.sleep(3000);
-		VIPVCMPage.contents.VCMModal.verifyDisplayed(true, 5);
-		Thread.sleep(4000);
-		WebControl.takeScreenshot("VCM_Reg_Auto_067");
+		VIPVCMPage.contents.VCMBodyTitle.verifyText("Input Assumptions");
+		//Lsison, 20211027, Redundant test
+//		VIPVCMPage.contents.VCMHelpIcon.click();
+//		Thread.sleep(3000);
+//		VIPVCMPage.contents.VCMModal.verifyDisplayed(true, 5);
+//		VIPVCMPage.contents.VCMModalCloseButton.click();
+//		Thread.sleep(1500);
+//		VIPVCMPage.contents.BackButton.click();
+//		VIPVCMPage.contents.VCMHelpIcon.click();
+//		Thread.sleep(3000);
+//		VIPVCMPage.contents.VCMModal.verifyDisplayed(true, 5);
+//		Thread.sleep(4000);
+		WebControl.takeScreenshot("VCM_Reg_Auto_068 - Verify if user will be redirected to previous Step upon clicking 'Back' button");
 
 		
-		  ReportLog.setTestCase("VCM_Reg_Auto_068");
+		  //ReportLog.setTestCase("VCM_Reg_Auto_069");
 		  //VIPVCMPage.contents.VCMModalDoNotShowCheckbox.click();
-		  VIPVCMPage.contents.VCMModalCloseButton.click(); Thread.sleep(1500);
-		  VIPVCMPage.contents.VCMHelpIcon.click(); Thread.sleep(3000);
-		  VIPVCMPage.contents.VCMModal.verifyDisplayed(true, 5);
-		  VIPVCMPage.contents.VCMModalCloseButton.click(); Thread.sleep(1500);
-		  WebControl.takeScreenshot("VCM_Reg_Auto_068");
+//		  VIPVCMPage.contents.VCMModalCloseButton.click(); Thread.sleep(1500);
+//		  VIPVCMPage.contents.VCMHelpIcon.click(); Thread.sleep(3000);
+//		  VIPVCMPage.contents.VCMModal.verifyDisplayed(true, 5);
+//		  VIPVCMPage.contents.VCMModalCloseButton.click(); Thread.sleep(1500);
+		 // WebControl.takeScreenshot("VCM_Reg_Auto_069");
 		 
 
-		ReportLog.setTestCase("VCM_Reg_Auto_069");
+		ReportLog.setTestCase("VCM_Reg_Auto_069 - Verify if SG&A or COGS is 0.0% it will be replaced by 'Operating Expense/Revenue'");
 		VIPLandingPage.contents.HelpIcon.hover();
 		VIPOverviewPage.contents.BackToSearchButton.hover();
 		VIPOverviewPage.contents.BackToSearchButton.click();
@@ -1540,14 +1571,14 @@ public class VCM_All extends TestBase {
 		VIPVCMPage.contents.VCMBodyTitle.waitForExist(true, 25);
 		VIPVCMPage.contents.KPINameOER.verifyText("Operating Expense / Revenue");
 		VIPVCMPage.contents.KPIOER.verifyText(OER);
-		WebControl.takeScreenshot("VCM_Reg_Auto_069");
+		WebControl.takeScreenshot("VCM_Reg_Auto_069 - Verify if SG&A or COGS is 0.0% it will be replaced by 'Operating Expense/Revenue'");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_070");
+		ReportLog.setTestCase("VCM_Reg_Auto_070 - Verify foot note disclaimer");
 		VIPVCMPage.contents.VCMFootNote.verifyText(
 				"Note: The breakup of COGS and SG&A for Deutsche Telekom AG may not be correct as the company does not report its (SG&A / Revenue (%)) value.");
-		WebControl.takeScreenshot("VCM_Reg_Auto_070");
+		WebControl.takeScreenshot("VCM_Reg_Auto_070 - Verify foot note disclaimer");
 
-		ReportLog.setTestCase("VCM_Reg_Auto_071");
+		ReportLog.setTestCase("VCM_Reg_Auto_071 - Verify Step 1 Nan Error when estimates are not available");
 		VIPLandingPage.contents.HelpIcon.hover();
 		VIPOverviewPage.contents.BackToSearchButton.hover();
 		VIPOverviewPage.contents.BackToSearchButton.click();
@@ -1574,39 +1605,8 @@ public class VCM_All extends TestBase {
 		  "Value Case Modeler cannot be built for this company since analyst estimates are not available to prepare the underlying DCF model."
 		  );
 		 
-		WebControl.takeScreenshot("VCM_Reg_Auto_071");
+		WebControl.takeScreenshot("VCM_Reg_Auto_071 - Verify Step 1 Nan Error when estimates are not available");
 		
-		//Lsison, 20211026, Test Add Custom VCO without Description
-		ReportLog.setTestCase("VCM_Reg_Auto_072");
-//		VIPLandingPage.contents.HelpIcon.hover();
-		VIPOverviewPage.contents.BackToSearchButton.hover();
-		VIPOverviewPage.contents.BackToSearchButton.click();
-		VIPOverviewPage.contents.ExitSavePopupYesButton.click();
-		VIPLandingPage.contents.CompanyNameTextbox.verifyDisplayed(true, 20);
-		Thread.sleep(3000);
-		VIPLandingPage.contents.CompanyNameTextbox.sendKeys(testDataHandler.company);
-		Thread.sleep(3000);
-		VIPLandingPage.contents.CompanyTypeAhead.waitForExist(true, 20);
-		Thread.sleep(3000);
-		VIPLandingPage.contents.CompanyTypeAhead.verifyDisplayed(true, 20);
-		VIPLandingPage.contents.CompanyTypeAhead.customJavaClick();
-		Thread.sleep(1000);
-		VIPOverviewPage.contents.OverviewTitle.waitForExist(true, 60);
-		VIPLandingPage.contents.HelpIcon.hover();
-		VIPVCMPage.contents.SideMenuVCM.waitForExist(true, 60);
-		Thread.sleep(3000);
-		VIPVCMPage.contents.SideMenuVCM.click();
-		Thread.sleep(4000);
-		if (testDataHandler.ShowVCMModal.equals("Yes")) {
-			VIPVCMPage.contents.VCMModalCloseButton.click();
-		}
-		VIPVCMPage.contents.VCOCategory.click();
-		VIPVCMPage.contents.VCOCategory1.click();
-		VIPVCMPage.contents.VCOName.sendKeys("Test");
-		VIPVCMPage.contents.VCOAddDisabled.click();
-		 
-		WebControl.takeScreenshot("VCM_Reg_Auto_072");
-
 	}
 
 }

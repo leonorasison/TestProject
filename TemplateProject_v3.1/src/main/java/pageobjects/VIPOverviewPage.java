@@ -36,7 +36,8 @@ public class VIPOverviewPage extends PageBase{
 		
 		// Lsison, 20211018, add save company button
 		public final Element SaveCompanyButton;
-		public final Element SaveReportInVIPCloseButton;
+		public final Element SaveCompanyModal;
+		public final Element SaveReportInVIPModalCloseButton;
 		public final Element SaveReportInVIPButton;
 		public final Element SaveReportInVIPToaster;
 		public final Element SaveReportInVIPCloseToasterButton;
@@ -153,8 +154,9 @@ public class VIPOverviewPage extends PageBase{
 			ExitSavePopup = new Element ("Exit Save Popup Window", By.xpath("//*[@id=\"exitsavePopup\"]/div/div"), this);
 			ExitSavePopupText = new Element ("Exit Save Popup Text", By.xpath("(//*[@class=\"modal-body-esg-text\"])[2]"), this);
 			ExitSavePopupYesButton = new Element ("Exit Save Popup Yes Button", By.xpath("//*[@id=\"exitsavePopup\"]/div/div/div[2]/div[1]/button[1]"), this);
-			SaveCompanyButton = new Element ("SaveCompanyButton", By.xpath("//*[@data-target = '#popup-save-report']"), this);
-			SaveReportInVIPCloseButton = new Element("Save Report In VIP Close Button", By.xpath("(//*[@class='close-button'])[1]"), this);
+			SaveCompanyButton = new Element ("Save Report Button", By.xpath("//*[@data-target = '#popup-save-report']"), this);
+			SaveCompanyModal = new Element ("Save Report Modal", By.xpath("//*[@class='esr-modal-content modal-content-summary modal-content-summary-genReport']"), this);
+			SaveReportInVIPModalCloseButton = new Element("Save Report In VIP Close Button", By.xpath("(//*[@class='close-button'])[1]"), this);
 			SaveReportInVIPButton = new Element("Save Report In VIP Button", By.xpath(" //*[@class='save-report ng-star-inserted']"), this);
 			SaveReportInVIPToaster = new Element("Save Report In VIP Toaster Message", By.xpath("//*[@id=\"toast-container\"]/div/div"), this);
 			SaveReportInVIPCloseToasterButton = new Element("Save Report In VIP Close Toaster Message", By.xpath("//*[@id='toast-container']//*[@aria-label='Close']"), this);
