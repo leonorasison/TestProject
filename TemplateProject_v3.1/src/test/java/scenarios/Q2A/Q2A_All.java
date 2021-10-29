@@ -34,6 +34,7 @@ public class Q2A_All extends TestBase{
 		VIPLandingPage.contents.WhatsNewModalCloseButton.click();
 		Thread.sleep(2000);
 		VIPLandingPage.contents.StartNowButton.click();
+		Thread.sleep(2000);
 		if ((testDataHandler.ShowCVS.equals("Yes")) & (testDataHandler.ShowVCM.equals("Yes"))) {
 		VIPLandingPage.contents.DisclaimerModal.waitForExist(true, 10);
 		VIPLandingPage.contents.DisclaimerProceedButton.click();
@@ -115,6 +116,12 @@ public class Q2A_All extends TestBase{
 		VIPLandingPage.contents.HelpIcon.hover();
 		VIPOverviewPage.contents.BackToSearchButton.hover();
 		VIPOverviewPage.contents.BackToSearchButton.click();
+		
+		//Lsison, 20211028, Add new ExitSave pop-up
+		VIPOverviewPage.contents.ExitSavePopup.verifyDisplayed(true, 20);
+		VIPOverviewPage.contents.ExitSavePopupText.verifyText("Are you sure you want to leave before saving the report?");
+		VIPOverviewPage.contents.ExitSavePopupYesButton.click();
+		
 		VIPLandingPage.contents.CompanyNameTextbox.verifyDisplayed(true, 10);
 		Thread.sleep(3000);
 		VIPLandingPage.contents.CompanyNameTextbox.sendKeys(testDataHandler.privCompany);
@@ -178,6 +185,12 @@ public class Q2A_All extends TestBase{
 		VIPLandingPage.contents.HelpIcon.hover();
 		VIPOverviewPage.contents.BackToSearchButton.hover();
 		VIPOverviewPage.contents.BackToSearchButton.click();
+		
+		//Lsison, 20211028, Add new ExitSave pop-up
+		VIPOverviewPage.contents.ExitSavePopup.verifyDisplayed(true, 20);
+		VIPOverviewPage.contents.ExitSavePopupText.verifyText("Are you sure you want to leave before saving the report?");
+		VIPOverviewPage.contents.ExitSavePopupYesButton.click();
+		
 		VIPLandingPage.contents.CompanyNameTextbox.verifyDisplayed(true, 10);
 		Thread.sleep(3000);
 		VIPLandingPage.contents.CompanyNameTextbox.sendKeys("vodafone");
@@ -210,6 +223,12 @@ public class Q2A_All extends TestBase{
 		VIPLandingPage.contents.HelpIcon.hover();
 		VIPOverviewPage.contents.BackToSearchButton.hover();
 		VIPOverviewPage.contents.BackToSearchButton.click();
+		
+		//Lsison, 20211028, Add new ExitSave pop-up
+		VIPOverviewPage.contents.ExitSavePopup.verifyDisplayed(true, 20);
+		VIPOverviewPage.contents.ExitSavePopupText.verifyText("Are you sure you want to leave before saving the report?");
+		VIPOverviewPage.contents.ExitSavePopupYesButton.click();
+		
 		VIPLandingPage.contents.CompanyNameTextbox.waitForExist(true, 10);
 		Thread.sleep(3000);
 		VIPLandingPage.contents.CompanyNameTextbox.sendKeys(testDataHandler.company);
@@ -1414,13 +1433,16 @@ public class Q2A_All extends TestBase{
 //		WebControl.takeScreenshot("Q2A_Reg_Auto_021");
 		
 		ReportLog.setTestCase("Q2A_Reg_Auto_022");
-		if (!testDataHandler.site.equals("https://web.valueinsightsplatform.accentureanalytics.com")) {
-		WebControl.openNew("https://web.valueinsightsplatform.accentureanalytics.com");
+		//if (!testDataHandler.site.equals("https://web.valueinsightsplatform.accentureanalytics.com")) {
+		if (!testDataHandler.site.equals("https://valueinsightsplatform-stage.accentureanalytics.com")) {
+		WebControl.openNew("https://web.valueinsightsplatform.accentureanalytics.com"); 
+		Thread.sleep(2000);
 		VIPLandingPage.contents.LandingPageLoadedCompletely.waitForExist(true, 120);
 		VIPLandingPage.contents.WhatsNewModal.waitForExist(true, 25);
 		VIPLandingPage.contents.WhatsNewModalCloseButton.click();
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		VIPLandingPage.contents.StartNowButton.click();
+		Thread.sleep(2000);
 		if ((testDataHandler.ShowCVS.equals("Yes")) & (testDataHandler.ShowVCM.equals("Yes"))) {
 		VIPLandingPage.contents.DisclaimerModal.waitForExist(true, 10);
 		VIPLandingPage.contents.DisclaimerProceedButton.click();
@@ -1439,13 +1461,14 @@ public class Q2A_All extends TestBase{
 		Thread.sleep(2000);
 		VIPLandingPage.contents.CompanyNameTextbox.sendKeys(testDataHandler.company);
 		Thread.sleep(3000);
-		VIPLandingPage.contents.CompanyTypeAhead.waitForExist(true, 20);
+		VIPLandingPage.contents.CompanyTypeAhead.waitForExist(true, 60);
 		Thread.sleep(3000);
-		VIPLandingPage.contents.CompanyTypeAhead.verifyDisplayed(true, 20);
+		VIPLandingPage.contents.CompanyTypeAhead.verifyDisplayed(true, 60);
 		VIPLandingPage.contents.CompanyTypeAhead.customJavaClick();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		VIPOverviewPage.contents.OverviewTitle.waitForExist(true, 60);
-		VIPFinancialsPage.contents.SideMenuFinancialsClick.verifyDisplayed(true, 5);
+		Thread.sleep(1000);
+		VIPFinancialsPage.contents.SideMenuFinancialsClick.verifyDisplayed(true, 60);
 		VIPFinancialsPage.contents.SideMenuFinancialsClick.click();
 		Thread.sleep(3000);
 		VIPLandingPage.contents.HelpIcon.hover();
@@ -1535,6 +1558,12 @@ public class Q2A_All extends TestBase{
 		VIPLandingPage.contents.HelpIcon.hover();
 		VIPOverviewPage.contents.BackToSearchButton.hover();
 		VIPOverviewPage.contents.BackToSearchButton.click();
+		
+		//Lsison, 20211028, Add new ExitSave pop-up
+		VIPOverviewPage.contents.ExitSavePopup.verifyDisplayed(true, 20);
+		VIPOverviewPage.contents.ExitSavePopupText.verifyText("Are you sure you want to leave before saving the report?");
+		VIPOverviewPage.contents.ExitSavePopupYesButton.click();
+		
 		VIPLandingPage.contents.CompanyNameTextbox.verifyDisplayed(true, 10);
 		Thread.sleep(3000);
 		VIPLandingPage.contents.CompanyNameTextbox.sendKeys(testDataHandler.privCompany);
@@ -1606,6 +1635,12 @@ public class Q2A_All extends TestBase{
 		VIPLandingPage.contents.HelpIcon.hover();
 		VIPOverviewPage.contents.BackToSearchButton.hover();
 		VIPOverviewPage.contents.BackToSearchButton.click();
+		
+		//Lsison, 20211028, Add new ExitSave pop-up
+		VIPOverviewPage.contents.ExitSavePopup.verifyDisplayed(true, 20);
+		VIPOverviewPage.contents.ExitSavePopupText.verifyText("Are you sure you want to leave before saving the report?");
+		VIPOverviewPage.contents.ExitSavePopupYesButton.click();
+		
 		VIPLandingPage.contents.CompanyNameTextbox.verifyDisplayed(true, 10);
 		Thread.sleep(3000);
 		VIPLandingPage.contents.CompanyNameTextbox.sendKeys(testDataHandler.company);
@@ -1810,15 +1845,16 @@ public class Q2A_All extends TestBase{
 		WebControl.takeScreenshot("Q2A_Regression_034");
 		
 		ReportLog.setTestCase("Q2A_Regression_035");
-		VIPFinancialsPage.contents.EvicInfoIcon.verifyDisplayed(true, 3);
-		VIPFinancialsPage.contents.EVEbitInfoIcon.verifyDisplayed(true, 3);
-		VIPFinancialsPage.contents.EbitICInfoIcon.verifyDisplayed(true, 3);
+		VIPFinancialsPage.contents.EvicInfoIcon.verifyDisplayed(true, 10);
 		VIPFinancialsPage.contents.EvicInfoIcon.hover();
 		VIPFinancialsPage.contents.EvicInfoIcon.click();
 		VIPFinancialsPage.contents.EvicInfoIconText.verifyDisplayed(true, 5);
+		VIPFinancialsPage.contents.EVEbitInfoIcon.verifyDisplayed(true, 10);
 		VIPFinancialsPage.contents.EVEbitInfoIcon.hover();
 		VIPFinancialsPage.contents.EVEbitInfoIcon.click();
 		VIPFinancialsPage.contents.EvicInfoIconText.verifyDisplayed(true, 5);
+		VIPFinancialsPage.contents.EbitICInfoIcon.verifyDisplayed(true, 10);
+		VIPLandingPage.contents.HelpIcon.hover(); //Lsison, 20211028, Added as work around for intercepted click
 		VIPFinancialsPage.contents.EbitICInfoIcon.hover();
 		VIPFinancialsPage.contents.EbitICInfoIcon.click();
 		VIPFinancialsPage.contents.EvicInfoIconText.verifyDisplayed(true, 5);
@@ -1873,8 +1909,9 @@ public class Q2A_All extends TestBase{
 		WebControl.takeScreenshot("Q2A_Regression_040");
 		
 		ReportLog.setTestCase("Q2A_Reg_Auto_042");
+		//if (!testDataHandler.site.equals("https://web.valueinsightsplatform.accentureanalytics.com")) {
 		if (!testDataHandler.site.equals("https://web.valueinsightsplatform.accentureanalytics.com")) {
-		WebControl.openNew("https://web.valueinsightsplatform.accentureanalytics.com");
+		WebControl.openNew("https://web.valueinsightsplatform.accentureanalytics.com/"); 
 		VIPLandingPage.contents.LandingPageLoadedCompletely.waitForExist(true, 120);
 		VIPLandingPage.contents.WhatsNewModal.waitForExist(true, 25);
 		VIPLandingPage.contents.WhatsNewModalCloseButton.click();
@@ -1938,10 +1975,12 @@ public class Q2A_All extends TestBase{
 		WebControl.takeScreenshot("Q2A_Regression_040");
 		
 		ReportLog.setTestCase("Q2A_Reg_Auto_042");
-		if (!testDataHandler.site.equals("https://web.valueinsightsplatform.accentureanalytics.com")) {
-		WebControl.openNew("https://web.valueinsightsplatform.accentureanalytics.com");
-		VIPLandingPage.contents.LandingPageLoadedCompletely.waitForExist(true, 120);
-		VIPLandingPage.contents.WhatsNewModal.waitForExist(true, 25);
+
+		if (!testDataHandler.site.equals("https://valueinsightsplatform-stage.accentureanalytics.com")) {
+		WebControl.openNew("https://valueinsightsplatform-stage.accentureanalytics.com/");
+		Thread.sleep(2000);
+		VIPLandingPage.contents.LandingPageLoadedCompletely.waitForExist(true, 150);
+		VIPLandingPage.contents.WhatsNewModal.waitForExist(true, 60);
 		VIPLandingPage.contents.WhatsNewModalCloseButton.click();
 		Thread.sleep(2000);
 		VIPLandingPage.contents.StartNowButton.click();
@@ -2048,12 +2087,14 @@ public class Q2A_All extends TestBase{
 		
 		ReportLog.setTestCase("Q2A_Reg_Auto_050");
 		if (!testDataHandler.site.equals("https://web.valueinsightsplatform.accentureanalytics.com")) {
-		WebControl.openNew("https://web.valueinsightsplatform.accentureanalytics.com");
-		VIPLandingPage.contents.LandingPageLoadedCompletely.waitForExist(true, 120);
-		VIPLandingPage.contents.WhatsNewModal.waitForExist(true, 25);
-		VIPLandingPage.contents.WhatsNewModalCloseButton.click();
-		Thread.sleep(2000);
-		VIPLandingPage.contents.StartNowButton.click();
+			WebControl.openNew("https://valueinsightsplatform-stage.accentureanalytics.com/home"); //change URL to stage
+			Thread.sleep(4000);
+			VIPLandingPage.contents.LandingPageLoadedCompletely.waitForExist(true, 120);
+			VIPLandingPage.contents.WhatsNewModal.waitForExist(true, 25);
+			VIPLandingPage.contents.WhatsNewModalCloseButton.click();
+			Thread.sleep(2000);
+			VIPLandingPage.contents.StartNowButton.click();
+			Thread.sleep(2000);
 		if ((testDataHandler.ShowCVS.equals("Yes")) & (testDataHandler.ShowVCM.equals("Yes"))) {
 		VIPLandingPage.contents.DisclaimerModal.waitForExist(true, 10);
 		VIPLandingPage.contents.DisclaimerProceedButton.click();
@@ -2106,10 +2147,23 @@ public class Q2A_All extends TestBase{
 		WebControl.takeScreenshot("Q2A_Reg_Auto_048");
 		
 		ReportLog.setTestCase("Q2A_Reg_Auto_050");
-		if (!testDataHandler.site.equals("https://web.valueinsightsplatform.accentureanalytics.com")) {
-		WebControl.openNew("https://web.valueinsightsplatform.accentureanalytics.com");
-		VIPLandingPage.contents.LandingPageLoadedCompletely.waitForExist(true, 120);
-		VIPLandingPage.contents.WhatsNewModal.waitForExist(true, 25);
+		/*
+		 * if (!testDataHandler.site.equals(
+		 * "https://web.valueinsightsplatform.accentureanalytics.com")) {
+		 * WebControl.openNew("https://web.valueinsightsplatform.accentureanalytics.com"
+		 * ); Thread.sleep(4000);
+		 * VIPLandingPage.contents.LandingPageLoadedCompletely.waitForExist(true, 120);
+		 * VIPLandingPage.contents.WhatsNewModal.waitForExist(true, 25);
+		 * VIPLandingPage.contents.WhatsNewModalCloseButton.click(); Thread.sleep(4000);
+		 * VIPLandingPage.contents.StartNowButton.click(); Thread.sleep(2000);
+		 */
+		//if (!testDataHandler.site.equals("https://web.valueinsightsplatform.accentureanalytics.com")) {
+		if (!testDataHandler.site.equals("https://valueinsightsplatform-stage.accentureanalytics.com")) {
+			WebControl.openNew("https://valueinsightsplatform-stage.accentureanalytics.com/"); //change URL to stage
+		//WebControl.openNew("https://web.valueinsightsplatform.accentureanalytics.com");
+		Thread.sleep(2000);
+		VIPLandingPage.contents.LandingPageLoadedCompletely.waitForExist(true, 150);
+		VIPLandingPage.contents.WhatsNewModal.waitForExist(true, 60);
 		VIPLandingPage.contents.WhatsNewModalCloseButton.click();
 		Thread.sleep(2000);
 		VIPLandingPage.contents.StartNowButton.click();
@@ -2247,8 +2301,10 @@ public class Q2A_All extends TestBase{
 		WebControl.takeScreenshot("Q2A_Reg_Auto_056_RPEFootnote");
 		
 		ReportLog.setTestCase("Q2A_Reg_Auto_058");
-		if (!testDataHandler.site.equals("https://web.valueinsightsplatform.accentureanalytics.com")) {
-		WebControl.openNew("https://web.valueinsightsplatform.accentureanalytics.com");
+		//if (!testDataHandler.site.equals("https://web.valueinsightsplatform.accentureanalytics.com")) {
+		if (!testDataHandler.site.equals("https://valueinsightsplatform-stage.accentureanalytics.com")) {
+		//WebControl.openNew("https://web.valueinsightsplatform.accentureanalytics.com");
+		WebControl.openNew("https://valueinsightsplatform-stage.accentureanalytics.com/home"); //change URL to stage
 		VIPLandingPage.contents.LandingPageLoadedCompletely.waitForExist(true, 120);
 		VIPLandingPage.contents.WhatsNewModal.waitForExist(true, 25);
 		VIPLandingPage.contents.WhatsNewModalCloseButton.click();
@@ -2308,8 +2364,10 @@ public class Q2A_All extends TestBase{
 		WebControl.takeScreenshot("Q2A_Reg_Auto_056_RPEFootnote");
 		
 		ReportLog.setTestCase("Q2A_Reg_Auto_058");
-		if (!testDataHandler.site.equals("https://web.valueinsightsplatform.accentureanalytics.com")) {
-		WebControl.openNew("https://web.valueinsightsplatform.accentureanalytics.com");
+		//if (!testDataHandler.site.equals("https://web.valueinsightsplatform.accentureanalytics.com")) {
+		if (!testDataHandler.site.equals("https://valueinsightsplatform-stage.accentureanalytics.com")) {
+		//WebControl.openNew("https://web.valueinsightsplatform.accentureanalytics.com");
+		WebControl.openNew("https://valueinsightsplatform-stage.accentureanalytics.com/home"); //change URL to stage
 		VIPLandingPage.contents.LandingPageLoadedCompletely.waitForExist(true, 120);
 		VIPLandingPage.contents.WhatsNewModal.waitForExist(true, 25);
 		VIPLandingPage.contents.WhatsNewModalCloseButton.click();
@@ -2522,8 +2580,10 @@ public class Q2A_All extends TestBase{
 		WebControl.takeScreenshot("Q2A_Reg_Auto_064");
 		
 		ReportLog.setTestCase("Q2A_Reg_Auto_065");
-		if (!testDataHandler.site.equals("https://web.valueinsightsplatform.accentureanalytics.com")) {
-		WebControl.openNew("https://web.valueinsightsplatform.accentureanalytics.com");
+		//if (!testDataHandler.site.equals("https://web.valueinsightsplatform.accentureanalytics.com")) {
+		if (!testDataHandler.site.equals("https://valueinsightsplatform-stage.accentureanalytics.com")) {
+			WebControl.openNew("https://valueinsightsplatform-stage.accentureanalytics.com/"); //change URL to stage
+		//WebControl.openNew("https://web.valueinsightsplatform.accentureanalytics.com");
 		VIPLandingPage.contents.LandingPageLoadedCompletely.waitForExist(true, 120);
 		VIPLandingPage.contents.WhatsNewModal.waitForExist(true, 25);
 		VIPLandingPage.contents.WhatsNewModalCloseButton.click();
@@ -2582,8 +2642,10 @@ public class Q2A_All extends TestBase{
 		WebControl.takeScreenshot("Q2A_Reg_Auto_064");
 		
 		ReportLog.setTestCase("Q2A_Reg_Auto_065");
-		if (!testDataHandler.site.equals("https://web.valueinsightsplatform.accentureanalytics.com")) {
-		WebControl.openNew("https://web.valueinsightsplatform.accentureanalytics.com");
+		//if (!testDataHandler.site.equals("https://web.valueinsightsplatform.accentureanalytics.com")) {
+		if (!testDataHandler.site.equals("https://valueinsightsplatform-stage.accentureanalytics.com")) {
+		WebControl.openNew("https://valueinsightsplatform-stage.accentureanalytics.com/home"); //change URL to stage
+		//WebControl.openNew("https://web.valueinsightsplatform.accentureanalytics.com");
 		VIPLandingPage.contents.LandingPageLoadedCompletely.waitForExist(true, 120);
 		VIPLandingPage.contents.WhatsNewModal.waitForExist(true, 25);
 		VIPLandingPage.contents.WhatsNewModalCloseButton.click();
@@ -2709,8 +2771,10 @@ public class Q2A_All extends TestBase{
 		WebControl.takeScreenshot("Q2A_Reg_Auto_072");
 		
 		ReportLog.setTestCase("Q2A_Reg_Auto_073");
-		if (!testDataHandler.site.equals("https://web.valueinsightsplatform.accentureanalytics.com")) {
-		WebControl.openNew("https://web.valueinsightsplatform.accentureanalytics.com");
+		//if (!testDataHandler.site.equals("https://web.valueinsightsplatform.accentureanalytics.com")) {
+		if (!testDataHandler.site.equals("https://valueinsightsplatform-stage.accentureanalytics.com")) {
+		WebControl.openNew("https://valueinsightsplatform-stage.accentureanalytics.com/home"); //change URL to stage
+		//WebControl.openNew("https://web.valueinsightsplatform.accentureanalytics.com");
 		VIPLandingPage.contents.LandingPageLoadedCompletely.waitForExist(true, 120);
 		VIPLandingPage.contents.WhatsNewModal.waitForExist(true, 25);
 		VIPLandingPage.contents.WhatsNewModalCloseButton.click();
@@ -2764,8 +2828,10 @@ public class Q2A_All extends TestBase{
 		WebControl.takeScreenshot("Q2A_Reg_Auto_072");
 		
 		ReportLog.setTestCase("Q2A_Reg_Auto_073");
-		if (!testDataHandler.site.equals("https://web.valueinsightsplatform.accentureanalytics.com")) {
-		WebControl.openNew("https://web.valueinsightsplatform.accentureanalytics.com");
+		//if (!testDataHandler.site.equals("https://web.valueinsightsplatform.accentureanalytics.com")) {
+		if (!testDataHandler.site.equals("https://valueinsightsplatform-stage.accentureanalytics.com")) {
+		WebControl.openNew("https://valueinsightsplatform-stage.accentureanalytics.com/home"); //change URL to stage
+		//WebControl.openNew("https://web.valueinsightsplatform.accentureanalytics.com");
 		VIPLandingPage.contents.LandingPageLoadedCompletely.waitForExist(true, 120);
 		VIPLandingPage.contents.WhatsNewModal.waitForExist(true, 25);
 		VIPLandingPage.contents.WhatsNewModalCloseButton.click();
@@ -4409,8 +4475,11 @@ public class Q2A_All extends TestBase{
 		WebControl.takeScreenshot("Q2A_Reg_Auto_090");
 		
 		ReportLog.setTestCase("Q2A_Reg_Auto_091");
-		if (!testDataHandler.site.equals("https://web.valueinsightsplatform.accentureanalytics.com")) {
-		WebControl.openNew("https://web.valueinsightsplatform.accentureanalytics.com");
+		//if (!testDataHandler.site.equals("https://web.valueinsightsplatform.accentureanalytics.com")) {
+		if (!testDataHandler.site.equals("https://valueinsightsplatform-stage.accentureanalytics.com")) {
+		WebControl.openNew("https://valueinsightsplatform-stage.accentureanalytics.com/"); //change URL to stage
+		//WebControl.openNew("https://web.valueinsightsplatform.accentureanalytics.com");
+		Thread.sleep(4000);
 		VIPLandingPage.contents.LandingPageLoadedCompletely.waitForExist(true, 120);
 		VIPLandingPage.contents.WhatsNewModal.waitForExist(true, 25);
 		VIPLandingPage.contents.WhatsNewModalCloseButton.click();
@@ -5362,8 +5431,10 @@ public class Q2A_All extends TestBase{
 		WebControl.takeScreenshot("Q2A_Reg_Auto_105");
 		
 		ReportLog.setTestCase("Q2A_Reg_Auto_106");
-		if (!testDataHandler.site.equals("https://web.valueinsightsplatform.accentureanalytics.com")) {
-		WebControl.openNew("https://web.valueinsightsplatform.accentureanalytics.com");
+		//if (!testDataHandler.site.equals("https://web.valueinsightsplatform.accentureanalytics.com")) {
+		if (!testDataHandler.site.equals("https://valueinsightsplatform-stage.accentureanalytics.com")) {
+			WebControl.openNew("https://valueinsightsplatform-stage.accentureanalytics.com/"); //change URL to stage
+		//WebControl.openNew("https://web.valueinsightsplatform.accentureanalytics.com");
 		VIPLandingPage.contents.LandingPageLoadedCompletely.waitForExist(true, 120);
 		VIPLandingPage.contents.WhatsNewModal.waitForExist(true, 25);
 		VIPLandingPage.contents.WhatsNewModalCloseButton.click();
@@ -5847,8 +5918,10 @@ public class Q2A_All extends TestBase{
 		WebControl.takeScreenshot("Q2A_Reg_Auto_115");
 
 		ReportLog.setTestCase("Q2A_Reg_Auto_116");
-		if (!testDataHandler.site.equals("https://web.valueinsightsplatform.accentureanalytics.com")) {
-		WebControl.openNew("https://web.valueinsightsplatform.accentureanalytics.com");
+		//if (!testDataHandler.site.equals("https://web.valueinsightsplatform.accentureanalytics.com")) {
+		if (!testDataHandler.site.equals("https://valueinsightsplatform-stage.accentureanalytics.com")) {
+			WebControl.openNew("https://valueinsightsplatform-stage.accentureanalytics.com/"); //change URL to stage
+		//WebControl.openNew("https://web.valueinsightsplatform.accentureanalytics.com");
 		VIPLandingPage.contents.LandingPageLoadedCompletely.waitForExist(true, 120);
 		VIPLandingPage.contents.WhatsNewModal.waitForExist(true, 25);
 		VIPLandingPage.contents.WhatsNewModalCloseButton.click();
@@ -5924,8 +5997,10 @@ public class Q2A_All extends TestBase{
 		WebControl.takeScreenshot("Q2A_Reg_Auto_115");
 
 		ReportLog.setTestCase("Q2A_Reg_Auto_116");
-		if (!testDataHandler.site.equals("https://web.valueinsightsplatform.accentureanalytics.com")) {
-		WebControl.openNew("https://web.valueinsightsplatform.accentureanalytics.com");
+		//if (!testDataHandler.site.equals("https://web.valueinsightsplatform.accentureanalytics.com")) {
+		if (!testDataHandler.site.equals("https://valueinsightsplatform-stage.accentureanalytics.com")) {
+			WebControl.openNew("https://valueinsightsplatform-stage.accentureanalytics.com/"); //change URL to stage
+		//WebControl.openNew("https://web.valueinsightsplatform.accentureanalytics.com");
 		VIPLandingPage.contents.LandingPageLoadedCompletely.waitForExist(true, 120);
 		VIPLandingPage.contents.WhatsNewModal.waitForExist(true, 25);
 		VIPLandingPage.contents.WhatsNewModalCloseButton.click();
@@ -6002,6 +6077,12 @@ public class Q2A_All extends TestBase{
 		VIPLandingPage.contents.HelpIcon.hover();
 		VIPOverviewPage.contents.BackToSearchButton.hover();
 		VIPOverviewPage.contents.BackToSearchButton.click();
+		
+		//Lsison, 20211028, Add new ExitSave pop-up
+		VIPOverviewPage.contents.ExitSavePopup.verifyDisplayed(true, 20);
+		VIPOverviewPage.contents.ExitSavePopupText.verifyText("Are you sure you want to leave before saving the report?");
+		VIPOverviewPage.contents.ExitSavePopupYesButton.click();
+		
 		VIPLandingPage.contents.CompanyNameTextbox.verifyDisplayed(true, 10);
 		Thread.sleep(3000);
 		VIPLandingPage.contents.CompanyNameTextbox.sendKeys(testDataHandler.company);
@@ -6052,6 +6133,12 @@ public class Q2A_All extends TestBase{
 		VIPLandingPage.contents.HelpIcon.hover();
 		VIPOverviewPage.contents.BackToSearchButton.hover();
 		VIPOverviewPage.contents.BackToSearchButton.click();
+		
+		//Lsison, 20211028, Add new ExitSave pop-up
+		VIPOverviewPage.contents.ExitSavePopup.verifyDisplayed(true, 20);
+		VIPOverviewPage.contents.ExitSavePopupText.verifyText("Are you sure you want to leave before saving the report?");
+		VIPOverviewPage.contents.ExitSavePopupYesButton.click();
+		
 		VIPLandingPage.contents.CompanyNameTextbox.verifyDisplayed(true, 10);
 		Thread.sleep(3000);
 		VIPLandingPage.contents.CompanyNameTextbox.sendKeys("Spotify");
@@ -6118,6 +6205,12 @@ public class Q2A_All extends TestBase{
 		VIPLandingPage.contents.HelpIcon.hover();
 		VIPOverviewPage.contents.BackToSearchButton.hover();
 		VIPOverviewPage.contents.BackToSearchButton.click();
+		
+		//Lsison, 20211028, Add new ExitSave pop-up
+		VIPOverviewPage.contents.ExitSavePopup.verifyDisplayed(true, 20);
+		VIPOverviewPage.contents.ExitSavePopupText.verifyText("Are you sure you want to leave before saving the report?");
+		VIPOverviewPage.contents.ExitSavePopupYesButton.click();
+		
 		VIPLandingPage.contents.CompanyNameTextbox.verifyDisplayed(true, 10);
 		Thread.sleep(3000);
 		VIPLandingPage.contents.CompanyNameTextbox.sendKeys(testDataHandler.company);
@@ -6216,6 +6309,12 @@ public class Q2A_All extends TestBase{
 		VIPLandingPage.contents.HelpIcon.hover();
 		VIPOverviewPage.contents.BackToSearchButton.hover();
 		VIPOverviewPage.contents.BackToSearchButton.click();
+		
+		//Lsison, 20211028, Add new ExitSave pop-up
+		VIPOverviewPage.contents.ExitSavePopup.verifyDisplayed(true, 20);
+		VIPOverviewPage.contents.ExitSavePopupText.verifyText("Are you sure you want to leave before saving the report?");
+		VIPOverviewPage.contents.ExitSavePopupYesButton.click();
+		
 		VIPLandingPage.contents.CompanyNameTextbox.verifyDisplayed(true, 10);
 		Thread.sleep(3000);
 		VIPLandingPage.contents.CompanyNameTextbox.sendKeys(testDataHandler.company);
@@ -6672,6 +6771,12 @@ public class Q2A_All extends TestBase{
 		VIPLandingPage.contents.HelpIcon.hover();
 		VIPOverviewPage.contents.BackToSearchButton.hover();
 		VIPOverviewPage.contents.BackToSearchButton.click();
+		
+		//Lsison, 20211028, Add new ExitSave pop-up
+		VIPOverviewPage.contents.ExitSavePopup.verifyDisplayed(true, 20);
+		VIPOverviewPage.contents.ExitSavePopupText.verifyText("Are you sure you want to leave before saving the report?");
+		VIPOverviewPage.contents.ExitSavePopupYesButton.click();
+		
 		VIPLandingPage.contents.CompanyNameTextbox.verifyDisplayed(true, 10);
 		Thread.sleep(3000);
 		VIPLandingPage.contents.CompanyNameTextbox.sendKeys(testDataHandler.privCompany);
@@ -6726,6 +6831,12 @@ public class Q2A_All extends TestBase{
 		VIPLandingPage.contents.HelpIcon.hover();
 		VIPOverviewPage.contents.BackToSearchButton.hover();
 		VIPOverviewPage.contents.BackToSearchButton.click();
+		
+		//Lsison, 20211028, Add new ExitSave pop-up
+		VIPOverviewPage.contents.ExitSavePopup.verifyDisplayed(true, 20);
+		VIPOverviewPage.contents.ExitSavePopupText.verifyText("Are you sure you want to leave before saving the report?");
+		VIPOverviewPage.contents.ExitSavePopupYesButton.click();
+		
 		VIPLandingPage.contents.CompanyNameTextbox.verifyDisplayed(true, 10);
 		Thread.sleep(3000);
 		VIPLandingPage.contents.CompanyNameTextbox.sendKeys(testDataHandler.company);
@@ -9080,6 +9191,12 @@ public class Q2A_All extends TestBase{
 		VIPLandingPage.contents.HelpIcon.hover();
 		VIPOverviewPage.contents.BackToSearchButton.hover();
 		VIPOverviewPage.contents.BackToSearchButton.click();
+		
+		//Lsison, 20211028, Add new ExitSave pop-up
+		VIPOverviewPage.contents.ExitSavePopup.verifyDisplayed(true, 20);
+		VIPOverviewPage.contents.ExitSavePopupText.verifyText("Are you sure you want to leave before saving the report?");
+		VIPOverviewPage.contents.ExitSavePopupYesButton.click();
+		
 		VIPLandingPage.contents.CompanyNameTextbox.verifyDisplayed(true, 10);
 		Thread.sleep(3000);
 		VIPLandingPage.contents.CompanyNameTextbox.sendKeys(testDataHandler.hotelCompany);
@@ -9305,6 +9422,12 @@ public class Q2A_All extends TestBase{
 		VIPLandingPage.contents.HelpIcon.hover();
 		VIPOverviewPage.contents.BackToSearchButton.hover();
 		VIPOverviewPage.contents.BackToSearchButton.click();
+		
+		//Lsison, 20211028, Add new ExitSave pop-up
+		VIPOverviewPage.contents.ExitSavePopup.verifyDisplayed(true, 20);
+		VIPOverviewPage.contents.ExitSavePopupText.verifyText("Are you sure you want to leave before saving the report?");
+		VIPOverviewPage.contents.ExitSavePopupYesButton.click();
+		
 		VIPLandingPage.contents.CompanyNameTextbox.verifyDisplayed(true, 10);
 		Thread.sleep(3000);
 		VIPLandingPage.contents.CompanyNameTextbox.sendKeys(testDataHandler.opexCompany);
@@ -9519,6 +9642,12 @@ public class Q2A_All extends TestBase{
 		VIPLandingPage.contents.HelpIcon.hover();
 		VIPOverviewPage.contents.BackToSearchButton.hover();
 		VIPOverviewPage.contents.BackToSearchButton.click();
+		
+		//Lsison, 20211028, Add new ExitSave pop-up
+		VIPOverviewPage.contents.ExitSavePopup.verifyDisplayed(true, 20);
+		VIPOverviewPage.contents.ExitSavePopupText.verifyText("Are you sure you want to leave before saving the report?");
+		VIPOverviewPage.contents.ExitSavePopupYesButton.click();
+		
 		VIPLandingPage.contents.CompanyNameTextbox.verifyDisplayed(true, 10);
 		Thread.sleep(3000);
 		VIPLandingPage.contents.CompanyNameTextbox.sendKeys(testDataHandler.opex1PeriodCompany);
